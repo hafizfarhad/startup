@@ -8,6 +8,7 @@ const rows = (await getCollection("usNexus")).map((e) => e.data);
 const tools = (await getCollection("tools")).map((e) => e.data);
 const latest = rows.map((r) => r.verification.verified_on).sort().at(-1) ?? "n/a";
 const withFigures = rows.filter((r) => r.verification.level !== "pending").length;
+const officialCount = rows.filter((r) => r.verification.level === "official").length;
 ---
 
 <Base title="US sales-tax nexus thresholds and tool pricing" description={siteConfig.tagline}>
@@ -18,8 +19,9 @@ const withFigures = rows.filter((r) => r.verification.level !== "pending").lengt
   </p>
   <ul>
     <li>
-      <a href="/us/economic-nexus/">Economic-nexus thresholds</a> for {rows.length} US jurisdictions ({withFigures} with
-      verified figures; most recent check {latest}).
+      <a href="/us/economic-nexus/">Economic-nexus thresholds</a> for {rows.length} US jurisdictions: {withFigures} with
+      published figures, {officialCount} checked against an official state page, every one with sources. Most recent
+      check {latest}.
     </li>
     <li><a href="/tools/">Pricing</a> for {tools.length} compliance tools and merchants of record.</li>
     <li><a href="/wizard/">The wizard</a>: enter sales by state, get a registration list and a cost estimate per tool.</li>
