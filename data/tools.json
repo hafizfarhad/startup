@@ -1,1 +1,584 @@
-[]
+[
+  {
+    "slug": "anrok",
+    "name": "Anrok",
+    "category": "compliance_software",
+    "website_url": "https://www.anrok.com",
+    "pricing_model": "per_jurisdiction_month",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": 100,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.anrok.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Starter plan is \"$100\" per market per month, and each US state where you are registered counts as one market; it includes \"Filing and remittance\". \"Additional fees may apply for Starter Plan sellers with high transaction volumes.\" The Custom plan is quoted based on transaction volume.",
+    "sources": [
+      {
+        "url": "https://www.anrok.com/pricing",
+        "publisher": "Anrok",
+        "title": "Pricing | Anrok",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "avalara",
+    "name": "Avalara",
+    "category": "compliance_software",
+    "website_url": "https://www.avalara.com",
+    "pricing_model": "per_jurisdiction_month",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": 69,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.avalara.com/us/en/products/sales-and-use-tax/pricing.html"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Page headline is \"starting at $69/state/month\" (Core Compliance + SST Services, $699 per state per year if billed annually); Core Compliance is $79 per state per month ($799 per state per year) for annual revenue under $50M. \"Avalara Sales Tax Registration is $403 per location.\"",
+    "sources": [
+      {
+        "url": "https://www.avalara.com/us/en/products/sales-and-use-tax/pricing.html",
+        "publisher": "Avalara",
+        "title": "Compare sales tax and compliance plans | Avalara",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "creem",
+    "name": "Creem",
+    "category": "merchant_of_record",
+    "website_url": "https://www.creem.io",
+    "pricing_model": "percent_plus_fixed",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": 3.9,
+      "fixed_fee_usd": 0.4,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.creem.io/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Pay as you go: \"3.9% + $0.40\" per successful transaction, with \"Monthly fees $0\" and \"Setup fees $0\". A Partner plan with \"Custom pricing\" is offered to higher-volume businesses.",
+    "sources": [
+      {
+        "url": "https://www.creem.io/pricing",
+        "publisher": "Creem",
+        "title": "Creem Pricing: 3.9% + $0.40 | No Monthly Fees, Simple Setup",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "dodo-payments",
+    "name": "Dodo Payments",
+    "category": "merchant_of_record",
+    "website_url": "https://dodopayments.com",
+    "pricing_model": "percent_plus_fixed",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": 4,
+      "fixed_fee_usd": 0.4,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://dodopayments.com/pricing"
+    },
+    "us_sales_tax_supported": false,
+    "notes": "Standard plan: \"4% + 40¢\" per transaction, including \"Cross-border tax & compliance handle\"; the Enterprise plan is listed as \"Custom\". The detailed table adds \"+1.5%\" for international payments and lists Tax Management (\"Automated tax calculation, filling and reporting in 190+ countries\") as \"Included\"; the page does not name US sales tax.",
+    "sources": [
+      {
+        "url": "https://dodopayments.com/pricing",
+        "publisher": "Dodo Payments",
+        "title": "Dodo Payments Pricing — 0% Setup Fee, Pay Only When You Transact | 220+ Countries | Dodo Payments",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "fastspring",
+    "name": "FastSpring",
+    "category": "merchant_of_record",
+    "website_url": "https://fastspring.com",
+    "pricing_model": "quote_only",
+    "pricing_public": false,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://fastspring.com/pricing/"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "No prices are listed; the page offers \"Get your pricing quote\" through a \"Build A Custom Quote\" form and describes \"simple, flat-rate pricing\".",
+    "sources": [
+      {
+        "url": "https://fastspring.com/pricing/",
+        "publisher": "FastSpring",
+        "title": "FastSpring Pricing: All-in-One Pricing. No Additional Fees.",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "gumroad",
+    "name": "Gumroad",
+    "category": "merchant_of_record",
+    "website_url": "https://gumroad.com",
+    "pricing_model": "percent_plus_fixed",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": 10,
+      "fixed_fee_usd": 0.5,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://gumroad.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Standard rate is \"10% + $0.50\" per transaction on sales through your profile or direct links, and \"30%\" per transaction when new customers buy through the Discover marketplace; the page lists \"no monthly charges\".",
+    "sources": [
+      {
+        "url": "https://gumroad.com/pricing",
+        "publisher": "Gumroad",
+        "title": "Gumroad pricing: 10% + 50¢ direct, 30% via Discover",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "kintsugi",
+    "name": "Kintsugi",
+    "category": "compliance_software",
+    "website_url": "https://trykintsugi.com",
+    "pricing_model": "per_filing",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": 75,
+      "filing_fee_usd": 75,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://trykintsugi.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Starter plan: \"Starter is priced per filing or registration, starting at $75 each.\" The Free plan ($0) covers exposure monitoring only, and the Premium plan is listed as \"Custom\".",
+    "sources": [
+      {
+        "url": "https://trykintsugi.com/pricing",
+        "publisher": "Kintsugi",
+        "title": "Kintsugi Pricing | Sales Tax Automation from $0/month",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "lemon-squeezy",
+    "name": "Lemon Squeezy",
+    "category": "merchant_of_record",
+    "website_url": "https://www.lemonsqueezy.com",
+    "pricing_model": "percent_plus_fixed",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": 5,
+      "fixed_fee_usd": 0.5,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.lemonsqueezy.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Ecommerce plan: \"5% + 50¢\" per transaction with \"no monthly charges for ecommerce features\". \"Contact us for volume-based pricing\", and \"Some payments may be subject to additional fees\".",
+    "sources": [
+      {
+        "url": "https://www.lemonsqueezy.com/pricing",
+        "publisher": "Lemon Squeezy",
+        "title": "Pricing • Lemon Squeezy",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "numeral",
+    "name": "Numeral",
+    "category": "compliance_software",
+    "website_url": "https://www.numeral.com",
+    "pricing_model": "per_filing",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": 150,
+      "filing_fee_usd": 75,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.numeral.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Professional plan: \"$75 per return filed plus a one-time $150 registration fee per state\". Standard accounts run month-to-month; the Enterprise plan is listed as \"Custom\".",
+    "sources": [
+      {
+        "url": "https://www.numeral.com/pricing",
+        "publisher": "Numeral",
+        "title": "Numeral Pricing | Compare Prices by Plan",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "paddle",
+    "name": "Paddle",
+    "category": "merchant_of_record",
+    "website_url": "https://www.paddle.com",
+    "pricing_model": "percent_plus_fixed",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": 5,
+      "fixed_fee_usd": 0.5,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.paddle.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Pay-as-you-go: \"5% + 50¢\" per Checkout transaction with \"No monthly fees, migration fees, or hidden extras\". Custom pricing is offered \"For high-volume businesses or more complex needs\".",
+    "sources": [
+      {
+        "url": "https://www.paddle.com/pricing",
+        "publisher": "Paddle",
+        "title": "All-in-One Pricing, No Hidden Costs | Paddle",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "polar",
+    "name": "Polar",
+    "category": "merchant_of_record",
+    "website_url": "https://polar.sh",
+    "pricing_model": "percent_plus_fixed",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": 5,
+      "fixed_fee_usd": 0.5,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://polar.sh/resources/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Starter plan is free with \"5% + 50¢\" per transaction; paid plans lower the rate (Pro $20/mo at 3.8% + 40¢, Growth $100/mo at 3.6% + 35¢, Scale $400/mo at 3.4% + 30¢), and \"+1.5% for international cards (non-US)\" is added. Organizations created before May 27, 2026 stay on an Early Member rate of 4% + 40¢.",
+    "sources": [
+      {
+        "url": "https://polar.sh/resources/pricing",
+        "publisher": "Polar",
+        "title": "Pricing | Polar",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://polar.sh/",
+        "publisher": "Polar",
+        "title": "Polar — A billing platform for the intelligence era",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "quaderno",
+    "name": "Quaderno",
+    "category": "compliance_software",
+    "website_url": "https://quaderno.io",
+    "pricing_model": "tiered_subscription",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": 29,
+      "pricing_url": "https://quaderno.io/pricing/"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Monthly billing: Hobby (25 transactions / month, 1 jurisdiction) 29, Startup (250 transactions / month) 49, Business (1,000 transactions / month) 99, Growth (2,500 transactions / month) 149 per month; the default \"Yearly\" view shows 24, 41, 83 and 124 per month. The page data holds bare numbers and its script shows a dollar sign to non-EU visitors and a euro sign otherwise; filing is offered (\"Quaderno can file and register for you\") with no price stated.",
+    "sources": [
+      {
+        "url": "https://quaderno.io/pricing/",
+        "publisher": "Quaderno",
+        "title": "Pricing",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "sphere",
+    "name": "Sphere",
+    "category": "compliance_software",
+    "website_url": "https://www.getsphere.com",
+    "pricing_model": "per_jurisdiction_month",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": 100,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://www.getsphere.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Starter plan is $100 per region per month for fewer than 10 regions and includes registration, calculation (up to 50,000 transactions) and filing and remittance; \"In the US that is typically a state.\" The page adds that \"some jurisdictions may have registration fees which we will debit your account for\"; the Growth plan (10+ regions) is listed as \"Custom\".",
+    "sources": [
+      {
+        "url": "https://www.getsphere.com/pricing",
+        "publisher": "Sphere",
+        "title": "Global Tax Compliance Software Pricing | Sphere",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "taxcloud",
+    "name": "TaxCloud",
+    "category": "compliance_software",
+    "website_url": "https://taxcloud.com",
+    "pricing_model": "tiered_subscription",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": 19,
+      "pricing_url": "https://taxcloud.com/taxcloud-pricing/"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Starter subscription starts at 19 per month (100 orders, billed monthly, from the page price table data); filing is a separate plan, \"with plans as low as $20 per filing\", and the filing row reads \"Starting at $39/mo\". Yearly billing is also offered (\"Save up to 16% on yearly plan\").",
+    "sources": [
+      {
+        "url": "https://taxcloud.com/taxcloud-pricing/",
+        "publisher": "TaxCloud",
+        "title": "TaxCloud Pricing: Simple Plans That Work for Every Business",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "taxjar",
+    "name": "TaxJar",
+    "category": "compliance_software",
+    "website_url": "https://www.taxjar.com",
+    "pricing_model": "tiered_subscription",
+    "pricing_public": true,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": 39,
+      "pricing_url": "https://www.taxjar.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "Starter is $39 per month for 200 orders per month and Professional is $99 per month. Filing uses AutoFile credits: \"2 AutoFile credits a year, additional credits $50\" on Starter and \"4 AutoFile credits a year, additional credits $55\" on Professional.",
+    "sources": [
+      {
+        "url": "https://www.taxjar.com/pricing",
+        "publisher": "TaxJar",
+        "title": "Pricing - TaxJar",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "slug": "zamp",
+    "name": "Zamp",
+    "category": "compliance_software",
+    "website_url": "https://zamp.com",
+    "pricing_model": "quote_only",
+    "pricing_public": false,
+    "pricing": {
+      "registration_fee_usd": null,
+      "filing_fee_usd": null,
+      "per_jurisdiction_month_usd": null,
+      "percent_fee": null,
+      "fixed_fee_usd": null,
+      "starting_monthly_usd": null,
+      "pricing_url": "https://zamp.com/pricing"
+    },
+    "us_sales_tax_supported": true,
+    "notes": "The \"U.S.\" and \"U.S. + Canada\" plans show \"Contact sales\" and no prices; the page says Zamp scopes pricing \"based on your actual footprint and compliance needs\". A Free plan covers a one-time nexus assessment and API sandbox access.",
+    "sources": [
+      {
+        "url": "https://zamp.com/pricing",
+        "publisher": "Zamp",
+        "title": "Sales Tax Pricing | Zamp",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  }
+]

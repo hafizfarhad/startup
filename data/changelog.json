@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-10-06",
+    "dataset": "tools",
+    "subject": "Initial tools and merchants of record",
+    "change": "Added 16 vendor rows from vendor pricing pages.",
+    "source_url": null
+  },
+  {
+    "date": "2026-10-06",
     "dataset": "us-economic-nexus",
     "subject": "North Dakota–Wyoming (17 jurisdictions)",
     "change": "Initial verified rows added.",
