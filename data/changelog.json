@@ -1,6 +1,13 @@
 [
   {
     "date": "2026-10-06",
+    "dataset": "us-economic-nexus",
+    "subject": "effective_date definition",
+    "change": "effective_date now records the date the currently stated threshold and rule took effect (original law dates kept in notes). Rows re-dated from cited sources: AK, AZ, CO, CT, GA, IL, IN; IA set to null pending resolution.",
+    "source_url": null
+  },
+  {
+    "date": "2026-10-06",
     "dataset": "tools",
     "subject": "Initial tools and merchants of record",
     "change": "Added 16 vendor rows from vendor pricing pages.",
