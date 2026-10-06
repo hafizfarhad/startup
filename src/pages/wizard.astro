@@ -1,0 +1,17 @@
+---
+import Wizard from "../components/wizard/Wizard.astro";
+import Base from "../layouts/Base.astro";
+---
+
+<Base
+  title="Where do I need to register for sales tax? US nexus wizard"
+  description="Enter your sales by state to see where economic-nexus thresholds indicate a registration obligation, with sources, and estimate the annual cost by compliance tool."
+>
+  <h1>US registration wizard</h1>
+  <p>
+    Enter your gross sales by state. The wizard compares them with each state's published economic-nexus threshold and
+    shows the sources behind every answer. It is information, not advice, and it does not evaluate whether your product
+    is taxable.
+  </p>
+  <Wizard />
+</Base>
