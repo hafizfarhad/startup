@@ -72,6 +72,20 @@ describe("estimateToolCost", () => {
     expect(e.notes.join(" ")).toMatch(/omitted/);
   });
 
+  it("merchant of record still computes from sales when there are zero registrations", () => {
+    const t = makeTool({ category: "merchant_of_record", pricing_model: "percent_plus_fixed", pricing: { ...nullPricing, percent_fee: 5, fixed_fee_usd: 0.5 } });
+    const e = estimateToolCost(t, { ...summary, registrationCount: 0 });
+    expect(e.annualEstimateUsd).toBe(5000 + 1000);
+    expect(e.notes.join(" ")).not.toMatch(/No registrations indicated/);
+  });
+
+  it("per_jurisdiction_month with zero registrations is zero with a note", () => {
+    const t = makeTool({ pricing_model: "per_jurisdiction_month", pricing: { ...nullPricing, per_jurisdiction_month_usd: 100 } });
+    const e = estimateToolCost(t, { ...summary, registrationCount: 0 });
+    expect(e.annualEstimateUsd).toBe(0);
+    expect(e.notes.join(" ")).toMatch(/No registrations indicated/);
+  });
+
   it("rounds to whole dollars", () => {
     const t = makeTool({ category: "merchant_of_record", pricing_model: "percent_plus_fixed", pricing: { ...nullPricing, percent_fee: 3.3 } });
     expect(estimateToolCost(t, { ...summary, totalSalesUsd: 1000.5, totalTransactions: undefined }).annualEstimateUsd).toBe(33);
