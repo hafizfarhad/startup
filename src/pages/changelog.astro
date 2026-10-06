@@ -1,0 +1,47 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const entries = (await getCollection("changelog"))
+  .map((e) => e.data)
+  .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+---
+
+<Base title="Changelog" description="Every change to a published threshold or price, with its date and source.">
+  <h1>Changelog</h1>
+  <p>Every change to a rendered figure is recorded here with its source.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Dataset</th>
+          <th>Subject</th>
+          <th>Change</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          entries.map((e) => (
+            <tr>
+              <td>{e.date}</td>
+              <td>{e.dataset}</td>
+              <td>{e.subject}</td>
+              <td>{e.change}</td>
+              <td>
+                {e.source_url ? (
+                  <a href={e.source_url} rel="noopener nofollow" target="_blank">
+                    source
+                  </a>
+                ) : (
+                  "—"
+                )}
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</Base>
