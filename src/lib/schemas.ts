@@ -3,6 +3,7 @@ import { z } from "astro/zod";
 export const US_JURISDICTION_COUNT = 51;
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const ONE_DAY_MS = 86_400_000;
 
 export function todayIso(now: Date = new Date()): string {
   return now.toISOString().slice(0, 10);
@@ -17,7 +18,7 @@ export const isoDate = z
   .string()
   .regex(ISO_DATE, "must be YYYY-MM-DD")
   .refine(isRealDate, "must be a real calendar date")
-  .refine((s) => s <= todayIso(), "must not be in the future");
+  .refine((s) => s <= todayIso(new Date(Date.now() + ONE_DAY_MS)), "must not be in the future (one day of timezone tolerance)");
 
 export const httpsUrl = z
   .string()

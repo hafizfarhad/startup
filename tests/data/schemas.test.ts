@@ -20,6 +20,8 @@ describe("isoDate", () => {
     future.setFullYear(future.getFullYear() + 1);
     expect(ok(isoDate, todayIso(future))).toBe(false);
   });
+  it("accepts tomorrow's UTC date, allowing for timezone offsets", () =>
+    expect(ok(isoDate, todayIso(new Date(Date.now() + 86_400_000)))).toBe(true));
 });
 
 describe("nexusRowSchema", () => {
@@ -58,6 +60,20 @@ describe("nexusRowSchema", () => {
       ok(
         nexusRowSchema,
         makeRow({ threshold_rule: "none", sales_threshold_usd: 100000, verification: { level: "pending", verified_on: DATE } }),
+      ),
+    ).toBe(false));
+  it("rejects a pending row with a comparator", () =>
+    expect(
+      ok(
+        nexusRowSchema,
+        makeRow({ threshold_rule: "none", sales_threshold_usd: null, comparator: "exceeds", measurement_period: null, sources: [], verification: { level: "pending", verified_on: DATE } }),
+      ),
+    ).toBe(false));
+  it("rejects a pending row with a measurement period", () =>
+    expect(
+      ok(
+        nexusRowSchema,
+        makeRow({ threshold_rule: "none", sales_threshold_usd: null, comparator: null, measurement_period: "Previous calendar year", sources: [], verification: { level: "pending", verified_on: DATE } }),
       ),
     ).toBe(false));
   it("rejects rule none with a threshold", () =>
@@ -110,6 +126,14 @@ describe("toolRowSchema", () => {
   it("rejects percent_plus_fixed without a percent", () =>
     expect(
       ok(toolRowSchema, makeTool({ pricing_model: "percent_plus_fixed", pricing: { ...makeTool().pricing, percent_fee: null } })),
+    ).toBe(false));
+  it("rejects per_jurisdiction_month without a per-jurisdiction fee", () =>
+    expect(
+      ok(toolRowSchema, makeTool({ pricing_model: "per_jurisdiction_month", pricing: { ...makeTool().pricing, per_jurisdiction_month_usd: null } })),
+    ).toBe(false));
+  it("rejects tiered_subscription without a starting monthly price", () =>
+    expect(
+      ok(toolRowSchema, makeTool({ pricing_model: "tiered_subscription", pricing: { ...makeTool().pricing, starting_monthly_usd: null } })),
     ).toBe(false));
   it("rejects a tool without sources", () => expect(ok(toolRowSchema, makeTool({ sources: [] }))).toBe(false));
   it("rejects a pending verification level on a tool", () =>
