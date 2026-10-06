@@ -12,7 +12,7 @@
     "includes_marketplace_sales": false,
     "effective_date": null,
     "registration_url": null,
-    "notes": "Sales Tax Institute lists the threshold as \"$250,000 + specified activities\"; Avalara lists \"$250,000 in sales only\". None of the three secondary sources states a transaction-count threshold. Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded and \"Sales made through a non-collecting marketplace\" as included.",
+    "notes": "Sales Tax Institute lists the threshold as \"$250,000 + specified activities\"; Avalara lists \"$250,000 in sales only\". The \"specified activities\" condition is not encoded in the threshold fields: this row records only the $250,000 sales threshold on which the sources agree, and no source states a transaction-count threshold. Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded and \"Sales made through a non-collecting marketplace\" as included.",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -54,9 +54,9 @@
     "sales_measure": "gross",
     "measurement_period": "Current or previous calendar year",
     "includes_marketplace_sales": true,
-    "effective_date": null,
+    "effective_date": "2025-01-01",
     "registration_url": null,
-    "notes": "The threshold comes from the Alaska Remote Seller Sales Tax Commission's code, which applies only to local jurisdictions that adopt it. Sales Tax Institute: the Commission passed its \"Remote Seller Sales Tax Code & Common Definitions\" that \"would apply to local municipalities in Alaska that choose to adopt it\"; registration is due \"The first day of the month following 30 days from adoption by the city or borough\". Commission page: \"The remote seller's statewide gross sales, including the seller's marketplace facilitator's statewide gross sales, from the sale(s) of property, products or services delivered in the state meets or exceeds one hundred thousand dollars ($100,000)\"; Alaska Remote Seller Sales Tax Code amended July 2024, effective January 1, 2025. Sales Tax Institute: \"Alaska removed their 200 transactions threshold effective, January 1, 2025\"; Avalara lists the previous rule as \"$100,000 or 200 transactions prior to January 1, 2025\". Effective dates by jurisdiction are \"Varies by district\" (Avalara) and \"Various adoption dates by municipalities\" (Sales Tax Institute), so no single effective date is recorded.",
+    "notes": "The threshold comes from the Alaska Remote Seller Sales Tax Commission's code, which applies only to local jurisdictions that adopt it. Sales Tax Institute: the Commission passed its \"Remote Seller Sales Tax Code & Common Definitions\" that \"would apply to local municipalities in Alaska that choose to adopt it\"; registration is due \"The first day of the month following 30 days from adoption by the city or borough\". Commission page: \"The remote seller's statewide gross sales, including the seller's marketplace facilitator's statewide gross sales, from the sale(s) of property, products or services delivered in the state meets or exceeds one hundred thousand dollars ($100,000)\"; \"Uniform Code as amended July 2024, effective January 1, 2025\". effective_date is the date the current rule (no transaction threshold) took effect: Sales Tax Institute \"Alaska removed their 200 transactions threshold effective, January 1, 2025\"; Avalara lists the previous rule as \"$100,000 or 200 transactions prior to January 1, 2025\"; TaxJar \"As of January 1, 2025, Alaska removed the transaction threshold\". When individual municipalities adopt the code varies: \"Varies by district\" (Avalara), \"Various adoption dates by municipalities\" (Sales Tax Institute); TaxJar lists \"January 6, 2020\" (with a 30-day local adoption period) as the original effective date.",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -104,9 +104,9 @@
     "sales_measure": "gross",
     "measurement_period": "Previous or current calendar year",
     "includes_marketplace_sales": false,
-    "effective_date": "2019-10-01",
+    "effective_date": "2021-01-01",
     "registration_url": null,
-    "notes": "Sales Tax Institute states the threshold as \"$200,000 in 2019; $150,000 in 2020; and $100,000 in 2021 and thereafter\"; Avalara and TaxJar list $100,000.",
+    "notes": "Economic nexus first effective October 1, 2019 (Sales Tax Institute, Avalara, TaxJar). effective_date is the start of the current $100,000 threshold: Sales Tax Institute \"$200,000 in 2019; $150,000 in 2020; and $100,000 in 2021 and thereafter\" (read as January 1, 2021); Avalara \"$100,000 in sales only as of January 1, 2021\" (previous: \"$200,000 in sales only as of January 1, 2019\", \"$150,000 in sales only as of January 1, 2020\"). TaxJar lists $100,000.",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -194,7 +194,7 @@
     "includes_marketplace_sales": true,
     "effective_date": null,
     "registration_url": null,
-    "notes": "Sales Tax Institute: \"California removed their transactions threshold and raised their sales threshold on April 25, 2019.\" Effective date is not recorded because sources differ (see data/BACKLOG.md).",
+    "notes": "Sales Tax Institute: Effective Date \"April 1, 2019\" and \"California removed their transactions threshold and raised their sales threshold on April 25, 2019.\" Avalara: effective date \"April 1, 2019\". TaxJar: effective date \"April 26, 2019\". The date the current rule began is not recorded because sources differ (see data/BACKLOG.md).",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -236,9 +236,9 @@
     "sales_measure": null,
     "measurement_period": "Previous or current calendar year",
     "includes_marketplace_sales": false,
-    "effective_date": "2018-12-01",
+    "effective_date": "2019-04-14",
     "registration_url": null,
-    "notes": "Sales Tax Institute: effective \"December 1, 2018 with grace period through May 31, 2019\" (\"If not registered as of December 1, 2018, subject to notice and reporting\"); \"Colorado removed their 200 transactions threshold effective April 14, 2019.\" Avalara lists the previous rule as \"$100,000 or 200 transactions prior to April 14, 2019\".",
+    "notes": "Economic nexus first effective December 1, 2018 (Sales Tax Institute: \"December 1, 2018 with grace period through May 31, 2019\", \"If not registered as of December 1, 2018, subject to notice and reporting\"; Avalara and TaxJar: December 1, 2018). effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"Colorado removed their 200 transactions threshold effective April 14, 2019\"; Avalara lists the previous rule as \"$100,000 or 200 transactions prior to April 14, 2019\".",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -280,9 +280,9 @@
     "sales_measure": null,
     "measurement_period": null,
     "includes_marketplace_sales": true,
-    "effective_date": null,
+    "effective_date": "2019-07-01",
     "registration_url": null,
-    "notes": "Both thresholds must be met (\"and\"). Sales Tax Institute: \"Connecticut lowered its dollar threshold from $250,000 to $100,000, effective July 1, 2019.\" Avalara lists the previous rule as \"$250,000 and 200 transactions prior to June 30, 2019\". Effective date, sales measure and measurement period are not recorded because sources differ (see data/BACKLOG.md).",
+    "notes": "Both thresholds must be met (\"and\"). Economic nexus first effective December 1, 2018 (Sales Tax Institute, TaxJar). effective_date is the date the dollar threshold was lowered to $100,000: Sales Tax Institute \"Connecticut lowered its dollar threshold from $250,000 to $100,000, effective July 1, 2019\"; Avalara effective date \"July 1, 2019\", with the previous rule \"$250,000 and 200 transactions prior to June 30, 2019\". Sales measure and measurement period are not recorded because sources differ (see data/BACKLOG.md).",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -444,9 +444,9 @@
     "sales_measure": null,
     "measurement_period": "Previous or current calendar year",
     "includes_marketplace_sales": false,
-    "effective_date": "2019-01-01",
+    "effective_date": "2020-01-01",
     "registration_url": null,
-    "notes": "Sales Tax Institute: \"$100,000 or 200 or more sales\", with a note \"$250,000 to $100,000, effective January 1, 2020\", and lists effective dates January 1, 2019 and January 1, 2020; Avalara and TaxJar give January 1, 2019. TaxJar describes the transaction count as \"more than 200 separate transactions\". Comparator and sales measure are not recorded because sources differ (see data/BACKLOG.md).",
+    "notes": "Economic nexus first effective January 1, 2019 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the dollar threshold was lowered to $100,000: Sales Tax Institute \"Georgia lowered their sales threshold from $250,000 to $100,000, effective January 1, 2020\"; Avalara lists the previous rule as \"$250,000 or 200 transactions prior to January 1, 2020\". Sales Tax Institute states the threshold as \"$100,000 or 200 or more sales\"; TaxJar describes the transaction count as \"more than 200 separate transactions\". Comparator and sales measure are not recorded because sources differ (see data/BACKLOG.md).",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -582,9 +582,9 @@
     "sales_measure": null,
     "measurement_period": "Preceding 12-month period",
     "includes_marketplace_sales": false,
-    "effective_date": "2018-10-01",
+    "effective_date": "2026-01-01",
     "registration_url": null,
-    "notes": "Sales Tax Institute: Illinois removed its 200-transaction threshold effective January 1, 2026; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to January 1, 2026\". Avalara also lists January 1, 2021 as the effective date for local use tax. Sales measure is not recorded because sources differ (see data/BACKLOG.md).",
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara for state use tax, TaxJar); Avalara also lists January 1, 2021 as the effective date for local use tax. effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"Illinois removed their 200 transactions threshold effective January 1, 2026\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to January 1, 2026\". Sales measure is not recorded because sources differ (see data/BACKLOG.md).",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -626,9 +626,9 @@
     "sales_measure": "gross",
     "measurement_period": "Previous or current calendar year",
     "includes_marketplace_sales": false,
-    "effective_date": "2018-10-01",
+    "effective_date": "2024-01-01",
     "registration_url": null,
-    "notes": "Indiana Department of Revenue page: \"Sellers must get a registered retail merchant's certificate and collect and remit applicable sales tax(es) if its gross revenue from sales into Indiana exceeds $100,000 in the previous or current calendar year.\" Sales Tax Institute: \"Indiana removed its 200 transactions threshold, effective January 1, 2024\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to January 1, 2024\"; TaxJar gives \"March 29, 2024\".",
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara, TaxJar). Indiana Department of Revenue page: \"Sellers must get a registered retail merchant's certificate and collect and remit applicable sales tax(es) if its gross revenue from sales into Indiana exceeds $100,000 in the previous or current calendar year.\" and \"Effective Jan. 1, 2024, Indiana only has the $100,000 threshold.\" effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"Indiana removed its 200 transactions threshold, effective January 1, 2024\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to January 1, 2024\". TaxJar gives \"March 29, 2024\"; the official date is used.",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -676,9 +676,9 @@
     "sales_measure": "gross",
     "measurement_period": "Current or immediately preceding calendar year",
     "includes_marketplace_sales": true,
-    "effective_date": "2019-01-01",
+    "effective_date": null,
     "registration_url": null,
-    "notes": "Sales Tax Institute and Avalara both describe a former 200-transaction threshold as removed (Sales Tax Institute: effective May 3, 2019; Avalara: \"prior to July 1, 2019\").",
+    "notes": "Economic nexus first effective January 1, 2019 (Sales Tax Institute, Avalara, TaxJar). Sales Tax Institute and Avalara both describe a former 200-transaction threshold as removed (Sales Tax Institute: \"Iowa removed their 200 transactions threshold, effective May 3, 2019\"; Avalara: \"$100,000 or 200 transactions prior to July 1, 2019\"). The date the current rule began is not recorded because the two dates differ (see data/BACKLOG.md).",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
