@@ -33,6 +33,10 @@ describe("combineOutcomes", () => {
     expect(combineOutcomes("sales_and_transactions", "trigger", "trigger")).toBe("registration_likely_required"));
   it("and-rule: trigger plus at is at", () =>
     expect(combineOutcomes("sales_and_transactions", "trigger", "at")).toBe("at_threshold_check_wording"));
+  it("or-rule: trigger beats at", () =>
+    expect(combineOutcomes("sales_or_transactions", "at", "trigger")).toBe("registration_likely_required"));
+  it("and-rule: all at is at", () =>
+    expect(combineOutcomes("sales_and_transactions", "at", "at")).toBe("at_threshold_check_wording"));
 });
 
 const noTax = makeRow({ code: "OR", name: "Oregon", has_state_sales_tax: false, threshold_rule: "none", sales_threshold_usd: null, measurement_period: null });
@@ -100,6 +104,28 @@ describe("evaluateState", () => {
     expect(r.caveats).toHaveLength(3);
     expect(r.sources).toEqual(salesOnly.sources);
   });
+  it("home state wins over pending verification", () => {
+    expect(evaluateState(pending, null, "PN").status).toBe("physical_presence");
+  });
+  it("sales_only row ignores a supplied transaction count", () => {
+    const r = evaluateState(salesOnly, { code: "TX", grossSalesUsd: 1, transactions: 1_000_000 }, null);
+    expect(r.status).toBe("below_threshold");
+  });
+  it("and-rule insufficient result names the missing transaction count", () => {
+    const r = evaluateState(andRule, { code: "NY", grossSalesUsd: 600000 }, null);
+    expect(r.status).toBe("insufficient_data");
+    expect(r.message).toMatch(/transaction count/);
+    expect(r.message).toContain("100-transaction");
+  });
+  it("result carries the row's thresholds, comparator, period and measure", () => {
+    const r = evaluateState(salesOnly, { code: "TX", grossSalesUsd: 1 }, null);
+    expect(r.salesThresholdUsd).toBe(500000);
+    expect(r.transactionsThreshold).toBeNull();
+    expect(r.comparator).toBe("exceeds");
+    expect(r.measurementPeriod).toBe("Preceding twelve calendar months");
+    expect(r.salesMeasure).toBe("gross");
+    expect(r.verificationLevel).toBe("corroborated");
+  });
 });
 
 describe("evaluateAll", () => {
@@ -135,5 +161,22 @@ describe("evaluateAll", () => {
     const out = evaluateAll({ homeState: null, lines: [{ code: "TX", grossSalesUsd: 0 }] }, rows);
     if (!out.ok) throw new Error("expected ok");
     expect(out.results[0]?.status).toBe("below_threshold");
+  });
+  it("a line-less home state with no sales tax yields one no-tax result and no registrations", () => {
+    const out = evaluateAll({ homeState: "OR", lines: [] }, rows);
+    if (!out.ok) throw new Error("expected ok");
+    expect(out.results.map((r) => [r.code, r.status])).toEqual([["OR", "no_state_sales_tax"]]);
+    expect(out.registrationCount).toBe(0);
+  });
+  it("a home state that also has a line appears once, as physical presence", () => {
+    const out = evaluateAll({ homeState: "TX", lines: [{ code: "TX", grossSalesUsd: 1 }] }, rows);
+    if (!out.ok) throw new Error("expected ok");
+    expect(out.results).toHaveLength(1);
+    expect(out.results[0]?.status).toBe("physical_presence");
+  });
+  it("validation failure returns the error list", () => {
+    const out = evaluateAll({ homeState: null, lines: [{ code: "QQ", grossSalesUsd: 1 }] }, rows);
+    if (out.ok) throw new Error("expected errors");
+    expect(out.errors[0]?.field).toBe("code");
   });
 });
