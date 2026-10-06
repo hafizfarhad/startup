@@ -30,4 +30,8 @@ export function outboundUrl(slug: string, websiteUrl: string, config: SiteConfig
   return config.affiliateUrls[slug] ?? websiteUrl;
 }
 
+export function robotsTxt(siteUrl: string): string {
+  return `User-agent: *\nAllow: /\nSitemap: ${new URL("sitemap-index.xml", siteUrl).toString()}\n`;
+}
+
 export { siteConfig };

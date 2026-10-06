@@ -6,6 +6,7 @@ import {
   isPlaceholderSiteUrl,
   outboundUrl,
   PLACEHOLDER_SITE_URL,
+  robotsTxt,
 } from "../src/lib/config";
 import type { SiteConfig } from "../site.config";
 
@@ -67,5 +68,23 @@ describe("outboundUrl", () => {
   it("returns the affiliate URL when configured for that slug", () => {
     const cfg = { ...base, affiliateUrls: { acme: "https://acme.example/?ref=x" } };
     expect(outboundUrl("acme", "https://acme.example", cfg)).toBe("https://acme.example/?ref=x");
+  });
+});
+
+describe("robotsTxt", () => {
+  it("emits an absolute Sitemap line from the site URL", () => {
+    expect(robotsTxt("https://example.com")).toContain(
+      "Sitemap: https://example.com/sitemap-index.xml",
+    );
+  });
+  it("allows all crawlers", () => {
+    const out = robotsTxt("https://example.com");
+    expect(out).toContain("User-agent: *");
+    expect(out).toContain("Allow: /");
+  });
+  it("does not double the slash when the site URL has a trailing slash", () => {
+    expect(robotsTxt("https://salestax.example/")).toContain(
+      "Sitemap: https://salestax.example/sitemap-index.xml",
+    );
   });
 });
