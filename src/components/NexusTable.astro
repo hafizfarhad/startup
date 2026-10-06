@@ -1,5 +1,5 @@
 ---
-import { formatThreshold, ruleLabel } from "../lib/format";
+import { formatThreshold, levelLabel, ruleLabel } from "../lib/format";
 import type { NexusRow } from "../lib/schemas";
 import { toSlug } from "../lib/slug";
 
@@ -35,7 +35,7 @@ const sorted = [...rows].sort((a, b) => a.name.localeCompare(b.name));
             <td>{r.measurement_period ?? "Not recorded"}</td>
             <td>{r.effective_date ?? "Not recorded"}</td>
             <td>
-              <span class={`badge badge-${r.verification.level}`}>{r.verification.level.replace("_", " ")}</span>
+              <span class={`badge badge-${r.verification.level}`}>{levelLabel(r.verification.level)}</span>
             </td>
           </tr>
         ))

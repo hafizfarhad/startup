@@ -9,6 +9,7 @@ const byLevel = rows.reduce<Record<string, number>>((acc, r) => {
   return acc;
 }, {});
 const latest = rows.map((r) => r.verification.verified_on).sort().at(-1) ?? "n/a";
+const reviewedCount = rows.filter((r) => r.review.status === "reviewed").length;
 ---
 
 <Base
@@ -16,10 +17,21 @@ const latest = rows.map((r) => r.verification.verified_on).sort().at(-1) ?? "n/a
   description="Economic-nexus sales and transaction thresholds for all 50 states and DC, each with sources and a verification date."
 >
   <h1>US economic nexus thresholds by state</h1>
+  <div class="badges">
+    <span class="badge badge-date">Most recent verification {latest}</span>
+    {
+      reviewedCount === 0 ? (
+        <span class="badge badge-unreviewed">Not yet professionally reviewed</span>
+      ) : (
+        <span class="badge badge-reviewed">{reviewedCount} of {rows.length} rows professionally reviewed</span>
+      )
+    }
+  </div>
   <p>
-    {rows.length} jurisdictions. Most recent verification: {latest}. Levels:
+    {rows.length} jurisdictions. Levels:
     {Object.entries(byLevel).map(([level, n]) => ` ${level.replace("_", " ")} ${n}`).join(",")}.
     Nexus is not the same as taxability; see the <a href="/methodology/">methodology</a>.
+    Sources for every figure are listed on each jurisdiction's page.
   </p>
   <NexusTable rows={rows} />
   <p class="muted">
