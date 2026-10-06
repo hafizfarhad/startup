@@ -1,0 +1,27 @@
+---
+import { levelLabel } from "../lib/format";
+import type { VerificationLevel } from "../lib/schemas";
+
+interface Props {
+  level: VerificationLevel;
+  verifiedOn: string;
+  reviewStatus: "unreviewed" | "reviewed";
+  reviewedBy?: string | null;
+  reviewedOn?: string | null;
+}
+
+const { level, verifiedOn, reviewStatus, reviewedBy = null, reviewedOn = null } = Astro.props;
+const reviewed = reviewStatus === "reviewed" && reviewedBy !== null && reviewedOn !== null;
+---
+
+<div class="badges">
+  <span class={`badge badge-${level}`}>{levelLabel(level)}</span>
+  <span class="badge badge-date">Verified {verifiedOn}</span>
+  {
+    reviewed ? (
+      <span class="badge badge-reviewed">Reviewed by {reviewedBy} on {reviewedOn}</span>
+    ) : (
+      <span class="badge badge-unreviewed">Not yet professionally reviewed</span>
+    )
+  }
+</div>

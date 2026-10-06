@@ -1,0 +1,19 @@
+---
+import { siteConfig } from "../lib/config";
+
+interface Props {
+  subject: string;
+}
+
+const { subject } = Astro.props;
+const email = siteConfig.owner.email.trim();
+const href = email === "" ? null : `mailto:${email}?subject=${encodeURIComponent(subject)}`;
+---
+
+{
+  href && (
+    <p class="report">
+      <a href={href}>Report an error</a> in this entry.
+    </p>
+  )
+}

@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import NexusTable from "../../../components/NexusTable.astro";
+import Base from "../../../layouts/Base.astro";
+
+const rows = (await getCollection("usNexus")).map((e) => e.data);
+const byLevel = rows.reduce<Record<string, number>>((acc, r) => {
+  acc[r.verification.level] = (acc[r.verification.level] ?? 0) + 1;
+  return acc;
+}, {});
+const latest = rows.map((r) => r.verification.verified_on).sort().at(-1) ?? "n/a";
+---
+
+<Base
+  title="US economic nexus thresholds by state"
+  description="Economic-nexus sales and transaction thresholds for all 50 states and DC, each with sources and a verification date."
+>
+  <h1>US economic nexus thresholds by state</h1>
+  <p>
+    {rows.length} jurisdictions. Most recent verification: {latest}. Levels:
+    {Object.entries(byLevel).map(([level, n]) => ` ${level.replace("_", " ")} ${n}`).join(",")}.
+    Nexus is not the same as taxability; see the <a href="/methodology/">methodology</a>.
+  </p>
+  <NexusTable rows={rows} />
+  <p class="muted">
+    <a href="/data/us-economic-nexus.json">Download this table as JSON</a> · Try the <a href="/wizard/">registration wizard</a>.
+  </p>
+</Base>

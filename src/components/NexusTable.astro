@@ -1,0 +1,45 @@
+---
+import { formatThreshold, ruleLabel } from "../lib/format";
+import type { NexusRow } from "../lib/schemas";
+import { toSlug } from "../lib/slug";
+
+interface Props {
+  rows: NexusRow[];
+}
+
+const { rows } = Astro.props;
+const sorted = [...rows].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<div class="table-wrap">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Jurisdiction</th>
+        <th>Threshold</th>
+        <th>Rule</th>
+        <th>Measurement period</th>
+        <th>Current rule since</th>
+        <th>Verification</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        sorted.map((r) => (
+          <tr>
+            <td>
+              <a href={`/us/economic-nexus/${toSlug(r.name)}/`}>{r.name}</a> <span class="muted">{r.code}</span>
+            </td>
+            <td>{formatThreshold(r)}</td>
+            <td>{ruleLabel(r.threshold_rule)}</td>
+            <td>{r.measurement_period ?? "Not recorded"}</td>
+            <td>{r.effective_date ?? "Not recorded"}</td>
+            <td>
+              <span class={`badge badge-${r.verification.level}`}>{r.verification.level.replace("_", " ")}</span>
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>
