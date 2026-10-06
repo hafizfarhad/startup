@@ -1,9 +1,32 @@
 ---
+import { getCollection } from "astro:content";
+import NewsletterForm from "../components/NewsletterForm.astro";
 import Base from "../layouts/Base.astro";
 import { siteConfig } from "../lib/config";
+
+const rows = (await getCollection("usNexus")).map((e) => e.data);
+const tools = (await getCollection("tools")).map((e) => e.data);
+const latest = rows.map((r) => r.verification.verified_on).sort().at(-1) ?? "n/a";
+const withFigures = rows.filter((r) => r.verification.level !== "pending").length;
 ---
 
-<Base title="Home" description={siteConfig.tagline}>
+<Base title="US sales-tax nexus thresholds and tool pricing" description={siteConfig.tagline}>
   <h1>{siteConfig.tagline}</h1>
-  <p>Build in progress.</p>
+  <p>
+    For software and digital-product sellers. Every threshold and every price on this site links to the page it came
+    from and shows the date it was checked. Nothing is typed from memory.
+  </p>
+  <ul>
+    <li>
+      <a href="/us/economic-nexus/">Economic-nexus thresholds</a> for {rows.length} US jurisdictions ({withFigures} with
+      verified figures; most recent check {latest}).
+    </li>
+    <li><a href="/tools/">Pricing</a> for {tools.length} compliance tools and merchants of record.</li>
+    <li><a href="/wizard/">The wizard</a>: enter sales by state, get a registration list and a cost estimate per tool.</li>
+  </ul>
+  <NewsletterForm />
+  <p class="muted">
+    Data changes are logged on the <a href="/changelog/">changelog</a>. How verification works:
+    <a href="/methodology/">methodology</a>.
+  </p>
 </Base>

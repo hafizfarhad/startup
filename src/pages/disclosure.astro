@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { siteConfig } from "../lib/config";
+
+const tools = (await getCollection("tools")).map((e) => e.data);
+const affiliateSlugs = Object.keys(siteConfig.affiliateUrls);
+const affiliateNames = affiliateSlugs.map((slug) => tools.find((t) => t.slug === slug)?.name ?? slug);
+---
+
+<Base title="Disclosure" description="How this site is funded and which links, if any, are affiliate links.">
+  <h1>Disclosure</h1>
+  {
+    affiliateNames.length === 0 ? (
+      <p>
+        This site currently has no affiliate, sponsorship or advertising relationships. Every link to a vendor is a
+        plain link. If that changes, this page will list each relationship before the first such link goes live.
+      </p>
+    ) : (
+      <>
+        <p>
+          Links to the following vendors are affiliate links. If you sign up through one of them, this site may earn a
+          commission at no extra cost to you. Rankings and figures are not influenced by these relationships: every
+          price comes from the vendor's own page and is dated.
+        </p>
+        <ul>{affiliateNames.map((n) => <li>{n}</li>)}</ul>
+      </>
+    )
+  }
+  <p>
+    Data and verification are described in the <a href="/methodology/">methodology</a>.
+  </p>
+</Base>

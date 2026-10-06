@@ -1,0 +1,69 @@
+---
+import Base from "../layouts/Base.astro";
+import { FILINGS_PER_STATE_PER_YEAR } from "../lib/engine/cost";
+import { levelLabel } from "../lib/format";
+---
+
+<Base
+  title="Methodology"
+  description="How thresholds and prices on this site are verified, what the verification and review badges mean, and how to report an error."
+>
+  <h1>Methodology</h1>
+
+  <h2>What this site is</h2>
+  <p>
+    A reference for software and digital-product sellers: US state economic-nexus thresholds, the public pricing of
+    sales-tax compliance tools and merchants of record, and a wizard that compares your sales with the thresholds.
+    It is information, not tax advice. Decisions about registration and filing belong with you and your adviser.
+  </p>
+
+  <h2>How a figure gets onto this site</h2>
+  <ol>
+    <li>A figure is recorded only from a page that was actually fetched. Nothing is typed from memory.</li>
+    <li>Every row lists its sources with the date each was accessed, and a "verified" date for the row.</li>
+    <li>
+      If sources conflict on a threshold and no official page could be reached, the row is published as "pending" with
+      no figures rather than with a guess.
+    </li>
+    <li>Every change to a published figure is recorded on the <a href="/changelog/">changelog</a>.</li>
+  </ol>
+
+  <h2>Verification badges</h2>
+  <dl class="facts">
+    <dt>{levelLabel("official")}</dt>
+    <dd>The state's own tax department page (or the vendor's own pricing page) was fetched and states the figure.</dd>
+    <dt>{levelLabel("corroborated")}</dt>
+    <dd>Two independent secondary sources were fetched and agree.</dd>
+    <dt>{levelLabel("single_secondary")}</dt>
+    <dd>Only one secondary source could be fetched. Treat with care and check the state page before acting.</dd>
+    <dt>{levelLabel("pending")}</dt>
+    <dd>No reliable source could be fetched, or sources conflict. No figures are shown.</dd>
+  </dl>
+
+  <h2>Review badge</h2>
+  <p>
+    "Not yet professionally reviewed" means exactly that: no tax professional has signed off on the row. When a named
+    reviewer does, the row shows their name and the date. Until then, treat every row as research, not advice.
+  </p>
+
+  <h2>What the wizard does and does not do</h2>
+  <ul>
+    <li>It compares the gross sales (and, if entered, transaction counts) you type with each state's published threshold.</li>
+    <li>It flags your home state as physical presence without evaluating thresholds.</li>
+    <li>It does not evaluate whether your product is taxable in a state. Nexus and taxability are separate questions.</li>
+    <li>It does not know your filing frequency. Cost estimates assume {FILINGS_PER_STATE_PER_YEAR} filings per registered state per year.</li>
+    <li>It does not store or send what you type. Everything runs in your browser.</li>
+  </ul>
+
+  <h2>Update cadence</h2>
+  <p>
+    All threshold rows are re-verified at least every six months and after state legislative sessions. Tool pricing is
+    re-verified quarterly. The verified date on each row is the authority on freshness.
+  </p>
+
+  <h2>Reporting an error</h2>
+  <p>
+    Each entry has a "Report an error" link when a contact address is published. Include the state or vendor, the
+    figure you believe is wrong, and a link to the page that shows the correct one.
+  </p>
+</Base>

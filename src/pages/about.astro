@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import { displayName, hasOwnerDetails, siteConfig } from "../lib/config";
+
+const name = displayName();
+const owner = siteConfig.owner;
+---
+
+<Base title="About" description={`What ${name} is, who runs it, and what it is for.`}>
+  <h1>About {name}</h1>
+  <h2>What this is</h2>
+  <p>
+    A sourced reference for software and digital-product sellers who need to know where US sales-tax registration
+    obligations arise and what the tools that handle them cost. Every figure links to its source and shows when it was
+    checked. See the <a href="/methodology/">methodology</a>.
+  </p>
+  {
+    hasOwnerDetails() && (
+      <>
+        <h2>Who runs it</h2>
+        <p>
+          {owner.name !== "" && <span>{owner.name}</span>}
+          {owner.location !== "" && <span>, {owner.location}</span>}
+          {owner.email !== "" && (
+            <span>
+              . Contact: <a href={`mailto:${owner.email}`}>{owner.email}</a>
+            </span>
+          )}
+        </p>
+        {siteConfig.reviewer.name !== "" && (
+          <p>
+            Reviewer of marked rows: {siteConfig.reviewer.name}
+            {siteConfig.reviewer.credential !== "" && <span>, {siteConfig.reviewer.credential}</span>}. Only rows
+            carrying the "Reviewed by" badge have been reviewed.
+          </p>
+        )}
+      </>
+    )
+  }
+  <h2>What it is not</h2>
+  <p>It is not tax advice, and it does not replace a conversation with a qualified adviser about your situation.</p>
+</Base>
