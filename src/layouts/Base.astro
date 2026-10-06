@@ -1,0 +1,51 @@
+---
+import "../styles/global.css";
+import { displayName, siteConfig } from "../lib/config";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const name = displayName();
+const canonical = new URL(Astro.url.pathname, siteConfig.siteUrl).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · {name}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="inner">
+        <a class="brand" href="/">{name}</a>
+        <nav aria-label="Main">
+          <a href="/us/economic-nexus/">US nexus thresholds</a>
+          <a href="/tools/">Tools and pricing</a>
+          <a href="/wizard/">Wizard</a>
+          <a href="/changelog/">Changelog</a>
+          <a href="/methodology/">Methodology</a>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="inner">
+        <p>
+          Information only, not tax advice. Figures are sourced and dated; see the
+          <a href="/methodology/">methodology</a> and <a href="/disclosure/">disclosure</a> pages.
+          <a href="/about/">About this site</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
