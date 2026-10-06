@@ -1900,11 +1900,11 @@
     "threshold_rule": "sales_only",
     "comparator": null,
     "sales_measure": "gross",
-    "measurement_period": null,
+    "measurement_period": "Preceding twelve calendar months",
     "includes_marketplace_sales": true,
     "effective_date": null,
     "registration_url": null,
-    "notes": "Sales Tax Institute: \"$500,000\", Effective Date \"October 1, 2019\"; Avalara: \"$500,000 in sales only\", Effective date \"July 1, 2019\"; TaxJar: \"Sales above $500,000 in Texas in the previous calendar year.\" and \"Effective date: October 1, 2019. (The initial timeframe for calculating these revenues was July 1, 2018, through June 30, 2019.)\" Effective date and measurement period are not recorded because sources differ (see data/BACKLOG.md). Comparator is not recorded because the only threshold wording found is TaxJar's \"above $500,000\", which does not state whether the threshold itself counts; Sales Tax Institute's \"exceeded the safe harbor threshold\" appears in its registration column, not in its Threshold cell. Sales measure: Sales Tax Institute \"Gross revenue: including taxable, nontaxable, and tax-exempt sales\"; Avalara \"Gross revenue from sales of tangible personal property and services into the state\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "notes": "Texas Comptroller Remote Sellers page: \"Remote sellers with total Texas revenue of less than $500,000 in the preceding twelve calendar months are not required to obtain a tax permit or collect, report and remit state and local use tax.\" and \"Your total Texas revenue is based on gross revenue from taxable and nontaxable sales of tangible personal property and services into Texas.\"; also \"if you exceed the $500,000 safe harbor amount, you are required to obtain a permit\". The official page states no date from which remote sellers had to collect. Sales Tax Institute: \"$500,000\", Effective Date \"October 1, 2019\"; Avalara: \"$500,000 in sales only\", Effective date \"July 1, 2019\"; TaxJar: \"Sales above $500,000 in Texas in the previous calendar year.\" and \"Effective date: October 1, 2019. (The initial timeframe for calculating these revenues was July 1, 2018, through June 30, 2019.)\" Effective date is not recorded because the sources differ and the official page states none (see data/BACKLOG.md). Measurement period is the official wording \"preceding twelve calendar months\", also used by Sales Tax Institute (\"Preceding twelve calendar months\"); Avalara says \"Previous 12-month period\"; TaxJar's \"previous calendar year\" differs and the official page decides. Comparator is not recorded: the official page words the safe harbor both \"less than $500,000\" and \"exceed the $500,000 safe harbor amount\", and TaxJar says \"above $500,000\". Sales measure: Sales Tax Institute \"Gross revenue: including taxable, nontaxable, and tax-exempt sales\"; Avalara \"Gross revenue from sales of tangible personal property and services into the state\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included; the official page adds \"A remote seller who only sells through a marketplace provider that certifies they are collecting and reporting sales and use tax on the remote seller's behalf is not required to hold a Texas tax permit.\"",
     "sources": [
       {
         "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
@@ -1923,10 +1923,16 @@
         "publisher": "TaxJar",
         "title": "Economic nexus laws by state",
         "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://comptroller.texas.gov/taxes/sales/remote-sellers.php",
+        "publisher": "Texas Comptroller of Public Accounts",
+        "title": "Remote Sellers",
+        "accessed_on": "2026-10-06"
       }
     ],
     "verification": {
-      "level": "corroborated",
+      "level": "official",
       "verified_on": "2026-10-06"
     },
     "review": {
