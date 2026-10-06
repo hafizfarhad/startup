@@ -2,6 +2,13 @@
   {
     "date": "2026-10-06",
     "dataset": "us-economic-nexus",
+    "subject": "Kentucky–North Carolina (17 jurisdictions)",
+    "change": "Initial verified rows added.",
+    "source_url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide"
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "us-economic-nexus",
     "subject": "Alabama–Kansas (17 jurisdictions)",
     "change": "Initial verified rows added.",
     "source_url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide"
