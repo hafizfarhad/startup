@@ -1,0 +1,2258 @@
+[
+  {
+    "code": "AL",
+    "name": "Alabama",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 250000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "retail",
+    "measurement_period": "Previous calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute lists the threshold as \"$250,000 + specified activities\"; Avalara lists \"$250,000 in sales only\". The \"specified activities\" condition is not encoded in the threshold fields: this row records only the $250,000 sales threshold on which the sources agree, and no source states a transaction-count threshold. Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded and \"Sales made through a non-collecting marketplace\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "AK",
+    "name": "Alaska",
+    "has_state_sales_tax": false,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Current or previous calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2025-01-01",
+    "registration_url": null,
+    "notes": "The threshold comes from the Alaska Remote Seller Sales Tax Commission's code, which applies only to local jurisdictions that adopt it. Sales Tax Institute: the Commission passed its \"Remote Seller Sales Tax Code & Common Definitions\" that \"would apply to local municipalities in Alaska that choose to adopt it\"; registration is due \"The first day of the month following 30 days from adoption by the city or borough\". Commission page: \"The remote seller's statewide gross sales, including the seller's marketplace facilitator's statewide gross sales, from the sale(s) of property, products or services delivered in the state meets or exceeds one hundred thousand dollars ($100,000)\"; \"Uniform Code as amended July 2024, effective January 1, 2025\". effective_date is the date the current rule (no transaction threshold) took effect: Sales Tax Institute \"Alaska removed their 200 transactions threshold effective, January 1, 2025\"; Avalara lists the previous rule as \"$100,000 or 200 transactions prior to January 1, 2025\"; TaxJar \"As of January 1, 2025, Alaska removed the transaction threshold\". When individual municipalities adopt the code varies: \"Varies by district\" (Avalara), \"Various adoption dates by municipalities\" (Sales Tax Institute); TaxJar lists \"January 6, 2020\" (with a 30-day local adoption period) as the original effective date.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://arsstc.org/about/code/",
+        "publisher": "Alaska Remote Seller Sales Tax Commission",
+        "title": "The Uniform Code",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "AZ",
+    "name": "Arizona",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2021-01-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2019 (Sales Tax Institute, Avalara, TaxJar). effective_date is the start of the current $100,000 threshold: Sales Tax Institute \"$200,000 in 2019; $150,000 in 2020; and $100,000 in 2021 and thereafter\" (read as January 1, 2021); Avalara \"$100,000 in sales only as of January 1, 2021\" (previous: \"$200,000 in sales only as of January 1, 2019\", \"$150,000 in sales only as of January 1, 2020\"). TaxJar lists $100,000.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "AR",
+    "name": "Arkansas",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2019-07-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\". Comparator not recorded: only the transaction count is described with \"or more\" and the wording of the dollar threshold is not stated.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "CA",
+    "name": "California",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 500000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Preceding or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute: Effective Date \"April 1, 2019\" and \"California removed their transactions threshold and raised their sales threshold on April 25, 2019.\" Avalara: effective date \"April 1, 2019\". TaxJar: effective date \"April 26, 2019\". The date the current rule began is not recorded because sources differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "CO",
+    "name": "Colorado",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2019-04-14",
+    "registration_url": null,
+    "notes": "Economic nexus first effective December 1, 2018 (Sales Tax Institute: \"December 1, 2018 with grace period through May 31, 2019\", \"If not registered as of December 1, 2018, subject to notice and reporting\"; Avalara and TaxJar: December 1, 2018). effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"Colorado removed their 200 transactions threshold effective April 14, 2019\"; Avalara lists the previous rule as \"$100,000 or 200 transactions prior to April 14, 2019\".",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "CT",
+    "name": "Connecticut",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_and_transactions",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": null,
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-07-01",
+    "registration_url": null,
+    "notes": "Both thresholds must be met (\"and\"). Economic nexus first effective December 1, 2018 (Sales Tax Institute, TaxJar). effective_date is the date the dollar threshold was lowered to $100,000: Sales Tax Institute \"Connecticut lowered its dollar threshold from $250,000 to $100,000, effective July 1, 2019\"; Avalara effective date \"July 1, 2019\", with the previous rule \"$250,000 and 200 transactions prior to June 30, 2019\". Sales measure and measurement period are not recorded because sources differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "DE",
+    "name": "Delaware",
+    "has_state_sales_tax": false,
+    "sales_threshold_usd": null,
+    "transactions_threshold": null,
+    "threshold_rule": "none",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": null,
+    "includes_marketplace_sales": null,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "No statewide sales tax. Sales Tax Institute lists Delaware with \"No sales tax\" in its economic nexus chart. Avalara and TaxJar do not list Delaware.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "single_secondary",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "DC",
+    "name": "District of Columbia",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "retail",
+    "measurement_period": null,
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-01-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate retail sales\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"Sales of $100,000 in Washington D.C. or more than 200 transactions in the state\". Comparator and measurement period are not recorded because sources differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "FL",
+    "name": "Florida",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "taxable",
+    "measurement_period": "Previous calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2021-07-01",
+    "registration_url": null,
+    "notes": "",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "GA",
+    "name": "Georgia",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2020-01-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective January 1, 2019 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the dollar threshold was lowered to $100,000: Sales Tax Institute \"Georgia lowered their sales threshold from $250,000 to $100,000, effective January 1, 2020\"; Avalara lists the previous rule as \"$250,000 or 200 transactions prior to January 1, 2020\". Sales Tax Institute states the threshold as \"$100,000 or 200 or more sales\"; TaxJar describes the transaction count as \"more than 200 separate transactions\". Comparator and sales measure are not recorded because sources differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "HI",
+    "name": "Hawaii",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Current or preceding calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2018-07-01",
+    "registration_url": null,
+    "notes": "Hawaii Department of Taxation page: \"gross income or receipts of $100,000 or more, or has 200 or more transactions in the current or preceding calendar year\". Sales Tax Institute: \"$100,000 or more or 200 or more separate transactions\". TaxJar describes the transaction count as \"more than 200 separate transactions\"; the official wording is used for the comparator.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://tax.hawaii.gov/get/",
+        "publisher": "Hawaii Department of Taxation",
+        "title": "General Excise Tax Information",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "ID",
+    "name": "Idaho",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-06-01",
+    "registration_url": null,
+    "notes": "",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "IL",
+    "name": "Illinois",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": "Preceding 12-month period",
+    "includes_marketplace_sales": false,
+    "effective_date": "2026-01-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara for state use tax, TaxJar); Avalara also lists January 1, 2021 as the effective date for local use tax. effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"Illinois removed their 200 transactions threshold effective January 1, 2026\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to January 1, 2026\". Sales measure is not recorded because sources differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "IN",
+    "name": "Indiana",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2024-01-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara, TaxJar). Indiana Department of Revenue page: \"Sellers must get a registered retail merchant's certificate and collect and remit applicable sales tax(es) if its gross revenue from sales into Indiana exceeds $100,000 in the previous or current calendar year.\" and \"Effective Jan. 1, 2024, Indiana only has the $100,000 threshold.\" effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"Indiana removed its 200 transactions threshold, effective January 1, 2024\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to January 1, 2024\". TaxJar gives \"March 29, 2024\"; the official date is used.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.in.gov/dor/i-am-a/business-corp/remote-sellers/",
+        "publisher": "Indiana Department of Revenue",
+        "title": "Remote Sellers",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "IA",
+    "name": "Iowa",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Current or immediately preceding calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Economic nexus first effective January 1, 2019 (Sales Tax Institute, Avalara, TaxJar). Sales Tax Institute and Avalara both describe a former 200-transaction threshold as removed (Sales Tax Institute: \"Iowa removed their 200 transactions threshold, effective May 3, 2019\"; Avalara: \"$100,000 or 200 transactions prior to July 1, 2019\"). The date the current rule began is not recorded because the two dates differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "KS",
+    "name": "Kansas",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Current or immediately preceding calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2021-07-01",
+    "registration_url": null,
+    "notes": "Comparator is from TaxJar's wording \"More than $100,000 of cumulative gross receipts from sales to customers in the state\"; Sales Tax Institute and Avalara do not state it. Sales Tax Institute footnotes: \"Only for calendar year 2021 sales since January 1, 2021\" (measurement period) and \"For marketplace facilitators, it is taxable instead of gross\" (sales measure).",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2026-08-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara); TaxJar lists July 1, 2018. effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"*Kentucky removed their 200 transactions threshold effective August 1, 2026.\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to August 1, 2026\"; TaxJar \"Kentucky removed their transaction threshold effective August 1, 2026.\" The Kentucky Department of Revenue notice \"Updated July 30, 2018\" (https://revenue.ky.gov/News/Pages/Kentucky-Sales-and-Use-Tax-Collections-by-Remote-Retailers-U.S.-Supreme-Court-Ruling.aspx) still reads \"200 or more sales into the state or $100,000 or more in gross receipts from sales into the state\"; it predates the removal, so it is not cited as a source. Comparator is not recorded because no cited source states it. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "LA",
+    "name": "Louisiana",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": null,
+    "effective_date": "2023-08-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective July 1, 2020 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"* Louisiana removed their 200 transactions threshold, effective August 1, 2023\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions, prior to August 1, 2023\". TaxJar still lists \"$100,000/year in gross revenue, or makes sales into Louisiana in more than 200 separate transactions in the previous or current calendar year\"; this row follows the two sources that state the removal. Sales Tax Institute lists \"Gross sales (Remote Sellers)\" and \"Retail sales (Marketplace Facilitators only)*\" (\"*Effective August 1, 2023\"); Avalara adds \"For marketplace facilitators, threshold is based on remote retail sales\"; the remote-seller measure (gross) is recorded. Marketplace inclusion is not recorded because sources differ.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "ME",
+    "name": "Maine",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2022-01-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective July 1, 2018 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the 200-transaction threshold was removed: Sales Tax Institute \"*Maine removed their 200 transactions threshold, effective January 1, 2022.\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions, prior to January 1, 2022\"; TaxJar \"Maine dropped their transaction threshold, effective January 1, 2022.\" Comparator is not recorded because no cited source states it. Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MD",
+    "name": "Maryland",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2018-10-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"$100,000/year in gross revenue, or makes sales into Maryland in more than 200 separate transactions in the previous or current calendar year.\" Comparator is not recorded because Sales Tax Institute (\"200 or more\") and TaxJar (\"more than 200\") differ. All three sources give October 1, 2018 as the effective date. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MA",
+    "name": "Massachusetts",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": null,
+    "includes_marketplace_sales": false,
+    "effective_date": "2019-10-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: Effective Date cell \"October 1, 2017\" and \"October 1, 2019\", with the footnote \"*Massachusetts removed its 100 transactions threshold and lowered the dollar threshold from $500,000 to $100,000, effective October 1, 2019.\" effective_date is the date the current rule began; Avalara and TaxJar also give October 1, 2019. TaxJar describes the earlier rule as \"The existing cookie nexus is $500,000 and 100 transactions in the previous or current calendar year.\" Measurement period is not recorded because TaxJar states the threshold as \"$100,000 in sales over the preceding calendar year\" whereas Sales Tax Institute and Avalara say previous or current calendar year. Sales measure \"Gross sales\" is from Sales Tax Institute only; Avalara and TaxJar do not state it. Comparator is not recorded because no cited source states it. Marketplace: Sales Tax Institute \"Marketplace sales excluded towards the threshold for individual sellers if the marketplace facilitator is collecting\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MI",
+    "name": "Michigan",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"$100,000 in gross revenue in the last calendar year or makes sales into Michigan in more than 200 separate transactions in the previous calendar year.\" Comparator and effective date are not recorded because sources differ (Sales Tax Institute and TaxJar \"October 1, 2018\", Avalara \"September 30, 2018\"). Sales measure: Sales Tax Institute \"Gross sales\", TaxJar \"gross revenue\"; Avalara does not state it. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MN",
+    "name": "Minnesota",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": "The twelve-month period ending on the last day of the most recently completed calendar quarter",
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-10-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more retail sales\" with the footnote \"*Minnesota changed its thresholds to be $100,000 or 200 transactions (from 100 transactions), effective October 1, 2019.\"; its Effective Date cell lists \"October 1, 2018\" and \"October 1, 2019\". Avalara and TaxJar give October 1, 2019, and Avalara lists the previous rule as \"10 or more sales totaling $100,000 or 100 transactions, prior to October 1, 2019\". effective_date is the date the current thresholds began. Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"$100,000 in gross revenue in the last 12 months or makes sales into Minnesota in more than 200 separate transactions in the previous 12 months.\" Comparator and sales measure are not recorded because sources differ. Measurement period is the Sales Tax Institute wording; Avalara states \"Threshold applies to the prior 12-month period\" and TaxJar \"the last 12 months\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MS",
+    "name": "Mississippi",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 250000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Prior twelve-month period",
+    "includes_marketplace_sales": false,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Comparator: Sales Tax Institute \"More than $250,000\"; TaxJar \"Sales into Mississippi that exceed $250,000 in the prior twelve months\"; Avalara \"$250,000 in sales only\". Sales measure \"Gross sales\" is from Sales Tax Institute only; Avalara and TaxJar do not state it. Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded. The effective date is not recorded because sources differ: Sales Tax Institute and Avalara \"September 1, 2018\", TaxJar \"December 1, 2017\".",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MO",
+    "name": "Missouri",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": null,
+    "measurement_period": "Previous twelve-month period reviewed quarterly",
+    "includes_marketplace_sales": true,
+    "effective_date": "2023-01-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000\", Effective Date \"1/1/2023\"; Avalara: \"$100,000 in sales only\", effective date \"January 1, 2023\"; TaxJar: effective date \"January 1, 2023\". Comparator is from TaxJar wording \"Sales into Missouri that hit at least $100,00 in value in the previous 12-month period\" (the TaxJar page carries the typo \"$100,00\"; its summary reads \"at least $100,000 of retail sales\"); Sales Tax Institute and Avalara do not state it. Sales measure is not recorded because sources differ: Sales Tax Institute \"Taxable sales of tangible personal property\", Avalara \"Gross receipts from taxable sales of tangible personal property delivered into the state\", TaxJar \"retail sales\". Measurement period: Avalara \"Preceding 12-month period, determined each calendar quarter\"; TaxJar \"previous 12-month period\". Marketplace: Sales Tax Institute \"including marketplace sales\"; Avalara lists \"Sales of tangible personal property made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "MT",
+    "name": "Montana",
+    "has_state_sales_tax": false,
+    "sales_threshold_usd": null,
+    "transactions_threshold": null,
+    "threshold_rule": "none",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": null,
+    "includes_marketplace_sales": null,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "No statewide sales tax. Sales Tax Institute lists Montana with \"No sales tax\" in its economic nexus chart. Avalara and TaxJar do not list Montana.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "single_secondary",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NE",
+    "name": "Nebraska",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "retail",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"Sales into Nebraska exceeding $100,000 or sales were made in 200 or more separate transactions in the current or last calendar year.\" Comparator is not recorded: TaxJar words the dollar threshold \"exceeding\" and the transaction count \"200 or more\", and one comparator cannot express both. Effective date is not recorded because sources differ: Sales Tax Institute \"January 1, 2019 (administrative announcement)\" and \"April 1, 2019 (enacted legislation)\", Avalara \"April 1, 2019\", TaxJar \"January 1, 2019\". Sales measure: Sales Tax Institute \"Retail sales\"; Avalara \"Total retail sales made to customers in the state\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NV",
+    "name": "Nevada",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": null,
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"$100,000/year in gross revenue the previous calendar year OR 200 or more separate transactions in the previous or current calendar year.\" Comparator is not recorded: only the transaction count is described with \"or more\" and the wording of the dollar threshold is not stated. Sales measure, measurement period and effective date are not recorded because sources differ. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NH",
+    "name": "New Hampshire",
+    "has_state_sales_tax": false,
+    "sales_threshold_usd": null,
+    "transactions_threshold": null,
+    "threshold_rule": "none",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": null,
+    "includes_marketplace_sales": null,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "No statewide sales tax. Sales Tax Institute lists New Hampshire with \"No sales tax\" in its economic nexus chart. Avalara and TaxJar do not list New Hampshire.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "single_secondary",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NJ",
+    "name": "New Jersey",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Current or prior calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2018-11-01",
+    "registration_url": "https://www.njportal.com/DOR/BusinessRegistration/",
+    "notes": "New Jersey Division of Taxation page: \"For sales made on and after November 1, 2018\", \"The remote seller's gross revenue from sales of tangible personal property, specified digital products, or taxable services delivered into New Jersey during the current or prior calendar year, exceeds $100,000; or\" and \"The remote seller sold tangible personal property, specified digital products, or taxable services delivered into New Jersey in 200 or more separate transactions during the current or prior calendar year.\" Comparator is not recorded because the official page words the dollar threshold \"exceeds\" and the transaction count \"200 or more\", and one comparator cannot express both. Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar describes the count as \"more than 200 transactions\"; the official wording is used. Registration link is the one the official page gives in its Registration section (option \"Register as Remote Seller Only\"). Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included; the official page says the marketplace facilitator collects and remits tax on marketplace transactions and does not say whether they count toward the threshold.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.nj.gov/treasury/taxation/remotesellers.shtml",
+        "publisher": "New Jersey Division of Taxation",
+        "title": "Remote Sellers",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NM",
+    "name": "New Mexico",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "taxable",
+    "measurement_period": "Previous calendar year",
+    "includes_marketplace_sales": null,
+    "effective_date": "2019-07-01",
+    "registration_url": null,
+    "notes": "New Mexico Taxation and Revenue Department page: \"Beginning July 1, 2019, a person who lacks physical presence in New Mexico can have economic nexus.\" and \"having in the previous calendar year total taxable gross receipts of at least one hundred thousand dollars ($100,000)\". Sales Tax Institute: \"Taxable sales\"; Avalara: \"Total taxable gross receipts from sales, leases, and licenses of tangible personal property\"; TaxJar: \"$100,000 in annual gross revenue from sales in New Mexico in the last calendar year\"; the official wording is used for the sales measure and comparator. Marketplace inclusion is not recorded because sources differ: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\", Avalara lists \"Sales made through a registered marketplace facilitator\" as included, and the official page says only \"This includes marketplace providers\".",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.tax.newmexico.gov/businesses/determining-nexus/",
+        "publisher": "New Mexico Taxation and Revenue Department",
+        "title": "Determining Nexus",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NY",
+    "name": "New York",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 500000,
+    "transactions_threshold": 100,
+    "threshold_rule": "sales_and_transactions",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Immediately preceding four sales tax quarters",
+    "includes_marketplace_sales": true,
+    "effective_date": "2018-06-21",
+    "registration_url": null,
+    "notes": "Both thresholds must be met (\"and\"). Sales Tax Institute: \"$500,000 in sales of tangible personal property and more than 100 sales\", effective \"June 21, 2018, the date of the Wayfair decision\", footnote \"*New York raised its threshold from $300,000 to $500,000 on June 24, 2019.\"; Avalara: \"$500,000 and 100 transactions\", effective \"June 21, 2018\"; TaxJar: \"$500,000 per year in gross revenue AND sales made into New York in more than 100 separate transactions in the last four quarters\", effective \"July 21, 2018\". New York Department of Taxation and Finance notice N-19-1: \"Note: On June 24, 2019, the Tax Law was amended to change the annual sales threshold dollar amount requiring a business with no physical presence in the state to register for sales tax from $300,000 to $500,000, effective retroactive to June 21, 2018\", and \"both made more than $300,000 in sales of tangible personal property delivered in the state and conducted more than 100 sales of tangible personal property delivered in the state in the immediately preceding four sales tax quarters\". effective_date is the official retroactive date of the $500,000 threshold; the Sales Tax Institute footnote date is the amendment date, and TaxJar \"July 21, 2018\" differs, so the official date is used. Comparator is not recorded: \"more than\" is stated for the 100-sale count, but no cited page states the wording of the current $500,000 dollar threshold. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.tax.ny.gov/pdf/notices/n19-1.pdf",
+        "publisher": "New York State Department of Taxation and Finance",
+        "title": "Important Notice N-19-1: Notice Regarding Sales Tax Registration Requirement for Businesses with No Physical Presence in New York State",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "NC",
+    "name": "North Carolina",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2024-07-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective November 1, 2018 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the transaction threshold was removed: Sales Tax Institute \"*North Carolina removed their transaction threshold, effective July 1, 2024.\"; Avalara lists the previous rule as \"Sales or transaction volume prior to July 1, 2024\"; TaxJar \"As of July 1, 2024, North Carolina removed the 200 transaction nexus requirement.\" Comparator is not recorded because no cited source states it. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "ND",
+    "name": "North Dakota",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "taxable",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara, TaxJar). The date the transaction threshold was removed differs across sources, so effective_date is not recorded: Sales Tax Institute \"North Dakota removed their 200 transactions threshold, effective December 31, 2018.\"; Avalara lists the previous rules as \"$100,000 in sales or 200 transactions prior to January 1, 2019\" and \"Sales or transactions included prior to July 1, 2019\"; TaxJar \"The transactions threshold was repealed, effective July 1, 2019.\" Comparator is from TaxJar wording \"Sales into North Dakota exceeding $100,000 in the current or last calendar year.\"; Sales Tax Institute and Avalara do not state it. Sales measure: Sales Tax Institute \"Taxable sales\"; Avalara \"Gross taxable sales of tangible personal property and other items into the state\"; TaxJar \"their taxable sales into the state exceed $100,000\". Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "OH",
+    "name": "Ohio",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": "Current or previous calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-08-01",
+    "registration_url": null,
+    "notes": "Ohio Department of Taxation page: \"Your total sales to Ohio customers were over $100,000 in the current or previous year, OR\" and \"You made 200 or more separate sales to Ohio customers in the current or previous year.\"; also \"Since August 1, 2019, businesses meeting certain sales levels must register for an Ohio seller's use tax account.\" Economic nexus first took effect January 1, 2018 at a higher threshold: Sales Tax Institute lists Effective Date \"January 1, 2018\" and \"August 1, 2019\" with the footnote \"Ohio lowered their threshold from $500,000 to $100,000 or 200 transactions, effective August 1, 2019.\"; Avalara and TaxJar also give August 1, 2019. effective_date is the date the current rule took effect. Comparator is not recorded: the official page words the dollar threshold \"over $100,000\" (and elsewhere \"more than $100,000\") but the transaction count \"200 or more\", and TaxJar words the dollar threshold \"$100,000 or more\". Sales measure is not recorded because sources differ. Measurement period wording: the official page says \"current or previous year\" and, for marketplace facilitators, \"in the current calendar year or the previous calendar year\"; Sales Tax Institute \"Previous or current calendar year\"; Avalara \"Current or previous calendar year\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included; the official page adds \"If the seller only uses an online marketplace, like Amazon or eBay, and that marketplace collects and pays the tax for them, then the license is not needed.\"",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://tax.ohio.gov/business/sales-and-use-tax/sales-and-use-tax",
+        "publisher": "Ohio Department of Taxation",
+        "title": "Sales and Use Tax",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "OK",
+    "name": "Oklahoma",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "taxable",
+    "measurement_period": null,
+    "includes_marketplace_sales": false,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 in aggregate sales of TPP\", Effective Date \"November 1, 2019\"; Avalara: \"$100,000 in sales only\"; TaxJar: \"Sales in Oklahoma of at least $100,000 in the previous 12 months\". Comparator is from TaxJar wording \"at least\"; Sales Tax Institute and Avalara do not state it. TaxJar describes the rule as a notice-and-report law: \"Sellers who meet the threshold are required to elect to do one of the following on or before June 1 of each calendar year:\" register and collect, or comply with the notice and reporting requirements. Avalara lists earlier rules \"$10,000 in aggregate sales of taxable TPP over the preceding 12 calendar months from July 1, 2018, through October 31, 2019\" and \"Taxable and exempt services excluded from threshold prior to November 1, 2023\". Measurement period and effective date are not recorded because sources differ. Sales measure: Sales Tax Institute \"Taxable sales\"; Avalara \"Aggregate sales of taxable tangible personal property\". Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "OR",
+    "name": "Oregon",
+    "has_state_sales_tax": false,
+    "sales_threshold_usd": null,
+    "transactions_threshold": null,
+    "threshold_rule": "none",
+    "comparator": null,
+    "sales_measure": null,
+    "measurement_period": null,
+    "includes_marketplace_sales": null,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "No statewide sales tax. Sales Tax Institute lists Oregon with \"No sales tax\" in its economic nexus chart. Avalara and TaxJar do not list Oregon.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "single_secondary",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "gross",
+    "measurement_period": null,
+    "includes_marketplace_sales": null,
+    "effective_date": "2019-07-01",
+    "registration_url": null,
+    "notes": "Pennsylvania has two tiers. Sales Tax Institute lists Threshold \"$10,000 or comply with the notice and reporting requirements\" (Effective Date \"April 1, 2018 for collection or notice and reporting option\") and \"$100,000\" (Effective Date \"July 1, 2019\"; registration \"Mandatory economic: April 1 following the calendar year when threshold was exceeded\"). Avalara lists \"$100,000 in sales only\" with Effective date \"July 1, 2019\". TaxJar: \"Sales into Pennsylvania that exceeded $100,000 in the previous calendar year are considered to have economic nexus. The notice and report is still in effect for those with taxable sales greater than $10,000 but less than $100,000 in a calendar year.\" The $10,000 notice-and-report election is not encoded in the threshold fields; TaxJar says \"Those who do not meet the economic threshold should make an election by March 1 of every year\" whereas Sales Tax Institute says \"Notice: On or before June 1 of each calendar year\". TaxJar gives no effective date for Pennsylvania (its note says only that the law was a notice-and-report law before January 2019); effective_date is the July 1, 2019 date stated by Sales Tax Institute and Avalara. Comparator is from TaxJar wording \"exceeded $100,000\"; Sales Tax Institute and Avalara do not state it. Sales measure: Sales Tax Institute (second tier) \"Gross sales on all channels including taxable, exempt, and marketplace sales\"; Avalara \"Gross sales of products and services in the commonwealth\". Measurement period and marketplace inclusion are not recorded because the sources differ: Avalara lists \"Sales made through a marketplace facilitator that does not collect sales tax on behalf of a remote seller\" as included and \"Sales made through a registered marketplace facilitator that collects sales tax on behalf of a remote seller\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "RI",
+    "name": "Rhode Island",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Immediately preceding calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-07-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; its Effective Date cell lists \"August 17, 2017\" for the register-or-notice stage (through June 30, 2019) and \"July 1, 2019\" for mandatory registration. Avalara: \"$100,000 or 200 transactions\", Effective date \"July 1, 2019\". TaxJar: \"Economic nexus effective date: July 1, 2019\" and \"Notice and Report effective date: July 15, 2017\" (Sales Tax Institute gives August 17, 2017 for the notice stage). effective_date is the date economic nexus (mandatory registration) began. Comparator is not recorded: TaxJar words the threshold \"exceed $100,000 or more, or 200 separate transactions in the state in a calendar year\", mixing \"exceed\" and \"or more\", and Sales Tax Institute states only \"200 or more separate transactions\". Measurement period: Sales Tax Institute \"Immediately preceding calendar year\"; Avalara \"Previous calendar year\"; TaxJar \"in a calendar year\". Sales measure: Sales Tax Institute \"Gross sales\"; Avalara \"Gross revenue from sales of tangible personal property\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "SC",
+    "name": "South Carolina",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2018-11-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000\"; Avalara: \"$100,000 in sales only\"; TaxJar: \"Sales of $100,000 in South Carolina in the previous or current calendar year\". Sales Tax Institute, Avalara and TaxJar all give the effective date \"November 1, 2018\". No source states a comparator or a transaction-count threshold. Sales measure: Sales Tax Institute \"Gross sales\"; Avalara \"Gross revenue from sales of tangible personal property\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "SD",
+    "name": "South Dakota",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2023-07-01",
+    "registration_url": null,
+    "notes": "South Dakota Department of Revenue page: \"Your business's gross revenue from sales into South Dakota exceeded $100,000\" in the \"previous or current calendar year\", and \"If the business does not have a physical presence but has more than $100,000 in gross sales into South Dakota in the previous or current calendar year, the business is required to license their business and remit applicable sales tax.\" Economic nexus first effective November 1, 2018 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the transaction threshold was removed: Sales Tax Institute \"South Dakota removed their transaction threshold, effective July 1, 2023.\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to July 1, 2023\"; TaxJar \"Beginning July 1, 2023, South Dakota will remove the 200 transaction threshold.\" The official page states no date. Sales measure: the official page says \"gross revenue\" and \"gross sales\"; Sales Tax Institute \"Gross revenue\"; Avalara \"Gross revenue from sales of tangible personal property\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://dor.sd.gov/businesses/taxes/sales-use-tax/",
+        "publisher": "South Dakota Department of Revenue",
+        "title": "Sales & Use Tax",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "TN",
+    "name": "Tennessee",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "exceeds",
+    "sales_measure": "retail",
+    "measurement_period": "Previous 12-month period",
+    "includes_marketplace_sales": false,
+    "effective_date": "2020-10-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2019 (Sales Tax Institute, TaxJar \"Effective date: October 1, 2019\"); Avalara's Effective date cell shows July 1, 2019. effective_date is the date the threshold was lowered to $100,000: Sales Tax Institute \"Tennessee lowered their threshold from $500,000 to $100,000, effective October 1, 2020.\"; Avalara lists the previous rules as \"$500,000 in sales only prior to October 1, 2020\". Sales Tax Institute's Threshold cell still displays \"$500,000*\"; the $100,000 figure comes from that footnote, from Avalara's \"$100,000 in sales only\" and from TaxJar's \"Sales exceeding $100,000 in the state in the previous 12 months\". Comparator is from TaxJar wording \"exceeding\"; Sales Tax Institute and Avalara do not state it. Sales measure \"Retail sales\" is from Sales Tax Institute only; Avalara lists \"Sales to customers in the state\", \"Exempt sales\" and \"Services (taxable and exempt)\" as included without naming a measure. Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers effective October 1, 2020\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded and \"Marketplace sales included prior to October 1, 2020\".",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "TX",
+    "name": "Texas",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 500000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Preceding twelve calendar months",
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Texas Comptroller Remote Sellers page: \"Remote sellers with total Texas revenue of less than $500,000 in the preceding twelve calendar months are not required to obtain a tax permit or collect, report and remit state and local use tax.\" and \"Your total Texas revenue is based on gross revenue from taxable and nontaxable sales of tangible personal property and services into Texas.\"; also \"if you exceed the $500,000 safe harbor amount, you are required to obtain a permit\". The official page states no date from which remote sellers had to collect. Sales Tax Institute: \"$500,000\", Effective Date \"October 1, 2019\"; Avalara: \"$500,000 in sales only\", Effective date \"July 1, 2019\"; TaxJar: \"Sales above $500,000 in Texas in the previous calendar year.\" and \"Effective date: October 1, 2019. (The initial timeframe for calculating these revenues was July 1, 2018, through June 30, 2019.)\" Effective date is not recorded because the sources differ and the official page states none. Measurement period is the official wording \"preceding twelve calendar months\", also used by Sales Tax Institute (\"Preceding twelve calendar months\"); Avalara says \"Previous 12-month period\"; TaxJar's \"previous calendar year\" differs and the official page decides. Comparator is not recorded: the official page words the safe harbor both \"less than $500,000\" and \"exceed the $500,000 safe harbor amount\", and TaxJar says \"above $500,000\". Sales measure: Sales Tax Institute \"Gross revenue: including taxable, nontaxable, and tax-exempt sales\"; Avalara \"Gross revenue from sales of tangible personal property and services into the state\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included; the official page adds \"A remote seller who only sells through a marketplace provider that certifies they are collecting and reporting sales and use tax on the remote seller's behalf is not required to hold a Texas tax permit.\"",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://comptroller.texas.gov/taxes/sales/remote-sellers.php",
+        "publisher": "Texas Comptroller of Public Accounts",
+        "title": "Remote Sellers",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "UT",
+    "name": "Utah",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2025-07-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective January 1, 2019 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the transaction threshold was removed: Sales Tax Institute \"Utah removed their 200 transactions threshold effective July 1, 2025.\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to July 1, 2025\". TaxJar does not mention the removal and still shows \"Effective date: January 1, 2019\". Comparator is from TaxJar wording \"Sales of $100,000 or more in the state in the current or last calendar year.\"; Sales Tax Institute and Avalara do not state it. Sales measure: Sales Tax Institute \"Gross sales\"; Avalara \"Gross revenue from sales of tangible personal property and services into the state\". Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "VT",
+    "name": "Vermont",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "gross",
+    "measurement_period": null,
+    "includes_marketplace_sales": true,
+    "effective_date": "2018-07-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"Sales of $100,000 or more in the state, or at least 200 individual sales transactions into the state during any preceding twelve-month period.\" Comparator: \"or more\" and \"at least\" are stated for both thresholds by TaxJar and for the transaction count by Sales Tax Institute. Measurement period is not recorded because the sources differ in precision: Sales Tax Institute \"Prior four calendar quarters\"; Avalara \"Previous 12-month period\". Sales measure \"Gross sales\" is from Sales Tax Institute only; Avalara lists \"Sales of tangible personal property and services into the state\" and \"Exempt sales\" as included without naming a measure. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included. Avalara adds the qualifier \"Businesses that only sell tax-exempt items into Vermont are not required to register for sales tax\", which the other sources do not mention.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "VA",
+    "name": "Virginia",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "retail",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2019-07-01",
+    "registration_url": "https://www.tax.virginia.gov/register-business-virginia",
+    "notes": "Virginia Department of Taxation page: \"A remote seller or marketplace facilitator has economic nexus if they sell or facilitate the sale of more than $100,000 in annual gross retail sales or 200 or more transactions to Virginia customers.\"; \"A remote seller is any dealer that, in the previous or current calendar year, either receives greater than $100,000 in gross revenue from retail sales, or engages in 200 or more separate retail sales transactions\". Comparator is not recorded: the official page words the dollar threshold \"more than\" and \"greater than\" but the transaction count \"200 or more\", and TaxJar words both \"or more\" and \"at least\". Sales measure: Sales Tax Institute \"Retail sales\"; Avalara lists \"Sales of tangible personal property\" without naming a measure. Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded; the official page counts \"annual direct sales to Virginia customers (sales that aren't made through the facilitator)\". The effective date July 1, 2019 is given by Sales Tax Institute, Avalara and TaxJar; the official page states no date. registration_url is the \"Register online\" link on the official page.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.tax.virginia.gov/remote-sellers-marketplace-facilitators-economic-nexus",
+        "publisher": "Virginia Department of Taxation",
+        "title": "Remote Sellers, Marketplace Facilitators, Economic Nexus",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "official",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "WA",
+    "name": "Washington",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": "Current or preceding calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": null,
+    "registration_url": null,
+    "notes": "Sales Tax Institute lists two tiers: \"$10,000 or comply with the notice and reporting requirements\" (Effective Date \"January 1, 2018 for collection or notice and reporting option\") and \"Gross income of the business exceeding $100,000\" (Effective Date \"October 1, 2018\"), with the footnote \"October 1, 2018 through December 31, 2019, sellers with 200 or more separate transactions into Washington must collect. However, effective March 14, 2019 the threshold will only be $100,000. The state removed the 200 transactions threshold.\" and, for the sales measure, \"Effective January 1, 2020 it became a gross income standard.\" Avalara: \"$100,000 in sales only\", included \"Cumulative gross annual income\", previous rules \"Cumulative gross receipts from retail sales and taxable services into the state prior to December 31, 2019\" and \"Cumulative gross annual income as of January 1, 2020\". TaxJar: \"Sales of $100,000 or more into the state into Washington in the current or last calendar year.\" and \"effective July 1, 2019, SSB Bill 5581 eliminated both the notice and reporting requirements established in the state's 2018 Marketplace Fairness law in addition to the 200 transaction trigger.\" Comparator and effective_date are not recorded because sources differ. The $10,000 notice-and-reporting tier is not encoded in the threshold fields. Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": 200,
+    "threshold_rule": "sales_or_transactions",
+    "comparator": null,
+    "sales_measure": "gross",
+    "measurement_period": null,
+    "includes_marketplace_sales": true,
+    "effective_date": "2019-01-01",
+    "registration_url": null,
+    "notes": "Sales Tax Institute: \"$100,000 or 200 or more separate transactions\"; Avalara: \"$100,000 or 200 transactions\"; TaxJar: \"Sales of $100,000/year in gross revenue the previous calendar year OR 200 or more separate transactions in the previous calendar year.\" Sales Tax Institute, Avalara and TaxJar all give the effective date \"January 1, 2019\". Comparator is not recorded: only the transaction count is described with \"or more\" and the wording of the dollar threshold is not stated. Measurement period is not recorded because sources differ. Sales measure: Sales Tax Institute \"Gross sales\"; Avalara \"Gross sales of tangible personal property and services into the state\"; TaxJar \"gross revenue\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "WI",
+    "name": "Wisconsin",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": true,
+    "effective_date": "2021-02-20",
+    "registration_url": null,
+    "notes": "Economic nexus first effective October 1, 2018 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the transaction threshold was removed: Sales Tax Institute \"Wisconsin removed their 200 transactions threshold, effective February 20, 2021.\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to February 20, 2021\"; TaxJar shows \"Effective date: October 1, 2018; Updated February 2021\". Comparator is from TaxJar wording \"Sales of $100,000 or more annually in the previous or current calendar year.\"; Sales Tax Institute and Avalara do not state it. Sales measure: Sales Tax Institute \"Gross sales\"; Avalara \"Annual gross sales of tangible personal property into the state\". Marketplace: Sales Tax Institute \"Marketplace sales included towards the threshold for individual sellers\" with the qualifier \"but if all sales are made through a marketplace that is collecting, the individual seller is not required to register\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as included and adds \"Businesses that make only nontaxable sales into Wisconsin are not required to register for sales tax\".",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  },
+  {
+    "code": "WY",
+    "name": "Wyoming",
+    "has_state_sales_tax": true,
+    "sales_threshold_usd": 100000,
+    "transactions_threshold": null,
+    "threshold_rule": "sales_only",
+    "comparator": "meets_or_exceeds",
+    "sales_measure": "gross",
+    "measurement_period": "Previous or current calendar year",
+    "includes_marketplace_sales": false,
+    "effective_date": "2024-07-01",
+    "registration_url": null,
+    "notes": "Economic nexus first effective February 1, 2019 (Sales Tax Institute, Avalara, TaxJar). effective_date is the date the transaction threshold was removed: Sales Tax Institute \"Wyoming removed their 200 transactions threshold, effective July 1, 2024.\"; Avalara lists the previous rule as \"$100,000 in sales or 200 transactions prior to July 1, 2024\"; TaxJar \"As of July 1, 2024, Wyoming removed the 200 transaction threshold from their economic nexus requirements.\" Comparator is from TaxJar wording \"Sales of $100,000 or more into the state.\"; Sales Tax Institute and Avalara do not state it. Sales measure: Sales Tax Institute \"Gross sales\"; Avalara \"Annual gross sales of tangible personal property into the state\". Marketplace: Sales Tax Institute \"Marketplace sales excluded from the threshold for individual sellers\"; Avalara lists \"Sales made through a registered marketplace facilitator\" as excluded.",
+    "sources": [
+      {
+        "url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide",
+        "publisher": "Sales Tax Institute",
+        "title": "Economic Nexus State Guide",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.avalara.com/us/en/learn/guides/state-by-state-guide-economic-nexus-laws.html",
+        "publisher": "Avalara",
+        "title": "State-by-state guide to economic nexus laws",
+        "accessed_on": "2026-10-06"
+      },
+      {
+        "url": "https://www.taxjar.com/sales-tax/economic-nexus",
+        "publisher": "TaxJar",
+        "title": "Economic nexus laws by state",
+        "accessed_on": "2026-10-06"
+      }
+    ],
+    "verification": {
+      "level": "corroborated",
+      "verified_on": "2026-10-06"
+    },
+    "review": {
+      "status": "unreviewed",
+      "by": null,
+      "on": null
+    }
+  }
+]

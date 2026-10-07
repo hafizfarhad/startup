@@ -1,6 +1,6 @@
 # SalesTax Engine v0.1 — Design Spec
 
-Status: approved design, awaiting written-spec review
+Status: implemented in v0.1.0 (see docs/superpowers/plans/2026-10-06-salestax-engine-v0.1.md)
 Date: 2026-10-06
 Working title: "SalesTax Engine" (rename in `site.config.ts` once the real .com is bought)
 Supersedes: nothing (first spec)

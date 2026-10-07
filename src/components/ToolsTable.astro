@@ -1,0 +1,61 @@
+---
+import { outboundUrl } from "../lib/config";
+import { formatPricing, modelLabel } from "../lib/format";
+import type { ToolRow } from "../lib/schemas";
+
+interface Props {
+  tools: ToolRow[];
+}
+
+const { tools } = Astro.props;
+const sorted = [...tools].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+{
+  sorted.length === 0 ? (
+    <p class="muted">No entries yet.</p>
+  ) : (
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Pricing model</th>
+            <th>US sales tax</th>
+            <th>Public pricing</th>
+            <th>Verified</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sorted.map((t) => (
+            <tr>
+              <td>
+                <a href={outboundUrl(t.slug, t.website_url)} rel="noopener nofollow" target="_blank">
+                  {t.name}
+                </a>
+              </td>
+              <td>{modelLabel(t.pricing_model)}</td>
+              <td>{t.us_sales_tax_supported ? "Yes" : "Not confirmed"}</td>
+              <td>
+                {formatPricing(t)}
+                {t.pricing.pricing_url && (
+                  <>
+                    {" "}
+                    <a href={t.pricing.pricing_url} rel="noopener nofollow" target="_blank" class="muted">
+                      source
+                    </a>
+                  </>
+                )}
+              </td>
+              <td>
+                <span class={`badge badge-${t.verification.level}`}>{t.verification.verified_on}</span>
+              </td>
+              <td>{t.notes}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}

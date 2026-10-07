@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import ToolsTable from "../../components/ToolsTable.astro";
+import Base from "../../layouts/Base.astro";
+
+const tools = (await getCollection("tools")).map((e) => e.data);
+const software = tools.filter((t) => t.category === "compliance_software");
+const mor = tools.filter((t) => t.category === "merchant_of_record");
+---
+
+<Base
+  title="Sales-tax compliance tools and merchants of record: pricing"
+  description="Public pricing of US sales-tax compliance software and merchants of record, taken from each vendor's pricing page and dated."
+>
+  <h1>Tools and pricing</h1>
+  <div class="badges"><span class="badge badge-unreviewed">Not yet professionally reviewed</span></div>
+  <p>
+    Every figure comes from the vendor's own pricing page on the date shown. Vendors without public pricing are
+    marked "Custom quote". Outbound links are plain links unless listed on the{" "}
+    <a href="/disclosure/">disclosure</a> page.
+  </p>
+  <h2>Compliance software</h2>
+  <ToolsTable tools={software} />
+  <h2>Merchants of record</h2>
+  <p class="muted">A merchant of record sells to your customers in its own name and handles tax in place of your own registrations.</p>
+  <ToolsTable tools={mor} />
+  {
+    tools.some((t) => !t.us_sales_tax_supported) && (
+      <p class="muted">
+        US sales tax column: "Yes" means the vendor's pages state support. "Not confirmed" means they do not, and the
+        wizard shows "Not confirmed for US sales tax" in place of a cost estimate for that vendor.
+      </p>
+    )
+  }
+  <p class="muted">
+    <a href="/data/tools.json">Download this table as JSON</a> · Estimate your cost with the <a href="/wizard/">wizard</a>.
+  </p>
+</Base>

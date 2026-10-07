@@ -1,0 +1,26 @@
+---
+import type { Source } from "../lib/schemas";
+
+interface Props {
+  sources: Source[];
+}
+
+const { sources } = Astro.props;
+---
+
+{
+  sources.length === 0 ? (
+    <p class="muted">No sources recorded.</p>
+  ) : (
+    <ul class="sources">
+      {sources.map((s) => (
+        <li>
+          <a href={s.url} rel="noopener nofollow" target="_blank">
+            {s.title}
+          </a>
+          , {s.publisher}, accessed {s.accessed_on}
+        </li>
+      ))}
+    </ul>
+  )
+}

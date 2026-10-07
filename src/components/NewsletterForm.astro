@@ -1,0 +1,17 @@
+---
+import { siteConfig } from "../lib/config";
+
+const action = siteConfig.newsletterActionUrl.trim();
+---
+
+{
+  action !== "" && (
+    <form class="newsletter" method="post" action={action}>
+      <label for="newsletter-email">Get one email when a threshold or a price changes.</label>
+      <div class="row">
+        <input id="newsletter-email" name="email" type="email" required placeholder="you@company.com" />
+        <button type="submit">Subscribe</button>
+      </div>
+    </form>
+  )
+}

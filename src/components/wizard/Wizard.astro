@@ -1,0 +1,79 @@
+---
+import { getCollection } from "astro:content";
+import { FILINGS_PER_STATE_PER_YEAR } from "../../lib/engine/cost";
+
+const rows = (await getCollection("usNexus")).map((e) => e.data).sort((a, b) => a.name.localeCompare(b.name));
+const tools = (await getCollection("tools")).map((e) => e.data);
+// Escape "<" so embedded JSON can never close the script tag.
+const asJson = (value: unknown) => JSON.stringify(value).replace(/</g, "\\u003c");
+---
+
+<section class="wizard">
+  <script type="application/json" id="wizard-nexus-data" set:html={asJson(rows)}></script>
+  <script type="application/json" id="wizard-tools-data" set:html={asJson(tools)}></script>
+
+  <form id="wizard-form" novalidate>
+    <fieldset>
+      <legend>Your business</legend>
+      <label for="home-state">Home state (physical presence), optional</label>
+      <select id="home-state" name="homeState">
+        <option value="">None, or outside the US</option>
+        {rows.map((r) => <option value={r.code}>{r.name}</option>)}
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Sales by state</legend>
+      <p class="muted">
+        Enter gross sales into each state over that state's measurement period. Transaction counts are optional but
+        needed where a state also has a transaction threshold.
+      </p>
+      <div id="lines"></div>
+      <button type="button" id="add-line">Add a state</button>
+    </fieldset>
+
+    <p id="form-errors" class="errors" role="alert" aria-live="polite"></p>
+    <button type="submit" id="evaluate">Evaluate</button>
+  </form>
+
+  <section id="results" hidden>
+    <h2>Results</h2>
+    <div class="badges"><span class="badge badge-unreviewed">Not yet professionally reviewed</span></div>
+    <p id="summary"></p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Status</th>
+            <th>Detail</th>
+            <th>Verification</th>
+          </tr>
+        </thead>
+        <tbody id="results-body"></tbody>
+      </table>
+    </div>
+
+    <h2>Estimated annual cost by tool</h2>
+    <p class="muted">
+      Estimates only. Assumes {FILINGS_PER_STATE_PER_YEAR} filings per registered state per year. Excludes state
+      registration fees, back taxes, penalties and interest. Nexus is not the same as taxability.
+    </p>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>Category</th>
+            <th>Annual estimate</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="costs-body"></tbody>
+      </table>
+    </div>
+    <ul class="caveats" id="caveats"></ul>
+  </section>
+</section>
+
+<script src="./wizard-client.ts"></script>

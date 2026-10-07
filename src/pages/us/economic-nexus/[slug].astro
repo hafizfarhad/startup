@@ -1,0 +1,83 @@
+---
+import { getCollection } from "astro:content";
+import Badges from "../../../components/Badges.astro";
+import ReportError from "../../../components/ReportError.astro";
+import SourceList from "../../../components/SourceList.astro";
+import Base from "../../../layouts/Base.astro";
+import { formatThreshold, ruleLabel } from "../../../lib/format";
+import type { NexusRow } from "../../../lib/schemas";
+import { toSlug } from "../../../lib/slug";
+
+export async function getStaticPaths() {
+  const entries = await getCollection("usNexus");
+  return entries.map((e) => ({ params: { slug: toSlug(e.data.name) }, props: { row: e.data } }));
+}
+
+interface Props {
+  row: NexusRow;
+}
+
+const { row } = Astro.props;
+const pending = row.verification.level === "pending";
+const title = `${row.name} economic nexus threshold`;
+const description = pending
+  ? `${row.name} economic-nexus threshold: verification pending.`
+  : `${row.name}: ${formatThreshold(row)}. ${ruleLabel(row.threshold_rule)}. ${row.measurement_period ?? "Measurement period not recorded"}.`;
+const yesNo = (v: boolean | null) => (v === null ? "Not recorded" : v ? "Yes" : "No");
+---
+
+<Base title={title} description={description}>
+  <article>
+    <h1>{row.name} <span class="muted">{row.code}</span></h1>
+    <Badges
+      level={row.verification.level}
+      verifiedOn={row.verification.verified_on}
+      reviewStatus={row.review.status}
+      reviewedBy={row.review.by}
+      reviewedOn={row.review.on}
+    />
+    {
+      pending ? (
+        <p class="notice">
+          Threshold figures for {row.name} are pending verification and are not shown. See the{" "}
+          <a href="/methodology/">methodology</a> for what that means.
+        </p>
+      ) : (
+        <dl class="facts">
+          <dt>Statewide sales tax</dt>
+          <dd>{row.has_state_sales_tax ? "Yes" : "No"}</dd>
+          <dt>Economic-nexus threshold</dt>
+          <dd>{formatThreshold(row)}</dd>
+          <dt>Rule</dt>
+          <dd>{ruleLabel(row.threshold_rule)}</dd>
+          <dt>Sales counted</dt>
+          <dd>{row.sales_measure ?? "Not recorded"}</dd>
+          <dt>Measurement period</dt>
+          <dd>{row.measurement_period ?? "Not recorded"}</dd>
+          <dt>Marketplace sales included</dt>
+          <dd>{yesNo(row.includes_marketplace_sales)}</dd>
+          <dt>Current rule since</dt>
+          <dd>{row.effective_date ?? "Not recorded"}</dd>
+          <dt>Register</dt>
+          <dd>
+            {row.registration_url ? (
+              <a href={row.registration_url} rel="noopener" target="_blank">
+                State registration page
+              </a>
+            ) : (
+              "Not recorded"
+            )}
+          </dd>
+        </dl>
+      )
+    }
+    {row.notes !== "" && <p class="notes">{row.notes}</p>}
+    <h2>Sources</h2>
+    <SourceList sources={row.sources} />
+    <ReportError subject={`Correction: ${row.name} economic nexus`} />
+    <p class="muted">
+      <a href="/us/economic-nexus/">All US jurisdictions</a> · <a href="/wizard/">Registration wizard</a> ·{" "}
+      <a href="/data/us-economic-nexus.json">Download JSON</a>
+    </p>
+  </article>
+</Base>

@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-10-07",
+    "dataset": "tools",
+    "subject": "Avalara",
+    "change": "per_jurisdiction_month_usd changed from 69 (SST-qualified plan) to 79 (Core Compliance standard price); the $69 SST plan is now described in notes.",
+    "source_url": "https://www.avalara.com/us/en/products/sales-and-use-tax/pricing.html"
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "us-economic-nexus",
+    "subject": "effective_date definition",
+    "change": "effective_date now records the date the currently stated threshold and rule took effect (original law dates kept in notes). Rows re-dated from cited sources: AK, AZ, CO, CT, GA, IL, IN; IA set to null pending resolution.",
+    "source_url": null
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "tools",
+    "subject": "Initial tools and merchants of record",
+    "change": "Added 16 vendor rows from vendor pricing pages.",
+    "source_url": null
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "us-economic-nexus",
+    "subject": "North Dakota–Wyoming (17 jurisdictions)",
+    "change": "Initial verified rows added.",
+    "source_url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide"
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "us-economic-nexus",
+    "subject": "Kentucky–North Carolina (17 jurisdictions)",
+    "change": "Initial verified rows added.",
+    "source_url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide"
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "us-economic-nexus",
+    "subject": "Alabama–Kansas (17 jurisdictions)",
+    "change": "Initial verified rows added.",
+    "source_url": "https://www.salestaxinstitute.com/resources/economic-nexus-state-guide"
+  },
+  {
+    "date": "2026-10-06",
+    "dataset": "site",
+    "subject": "v0.1",
+    "change": "Site created.",
+    "source_url": null
+  }
+]
