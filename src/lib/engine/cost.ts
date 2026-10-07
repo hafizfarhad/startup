@@ -1,3 +1,4 @@
+import { fmtUsd } from "../format";
 import type { ToolRow } from "../schemas";
 
 export const FILINGS_PER_STATE_PER_YEAR = 4;
@@ -60,7 +61,7 @@ export function estimateToolCost(tool: ToolRow, summary: CostSummary): ToolCostE
       if (p.fixed_fee_usd !== null) {
         if (summary.totalTransactions === undefined) {
           notes.push(
-            `Per-transaction fee of $${p.fixed_fee_usd} omitted: enter transaction counts on every line to include it.`,
+            `Per-transaction fee of ${fmtUsd(p.fixed_fee_usd)} omitted: enter transaction counts on every line to include it.`,
           );
         } else {
           fixedPart = p.fixed_fee_usd * summary.totalTransactions;

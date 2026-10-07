@@ -24,6 +24,7 @@ export type StateResult = {
   measurementPeriod: string | null;
   salesMeasure: NexusRow["sales_measure"];
   verificationLevel: VerificationLevel;
+  verifiedOn: string;
   sources: Source[];
   notes: string;
   message: string;

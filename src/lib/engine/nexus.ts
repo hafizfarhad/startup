@@ -96,6 +96,7 @@ export function evaluateState(row: NexusRow, line: WizardLine | null, homeState:
     measurementPeriod: row.measurement_period,
     salesMeasure: row.sales_measure,
     verificationLevel: row.verification.level,
+    verifiedOn: row.verification.verified_on,
     sources: row.sources,
     notes: row.notes,
     caveats: [...CAVEATS],

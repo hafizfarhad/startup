@@ -9,6 +9,13 @@ describe("parseMoney", () => {
   it("returns null for blank", () => expect(parseMoney("   ")).toBeNull());
   it("returns null for negatives", () => expect(parseMoney("-5")).toBeNull());
   it("returns null for text", () => expect(parseMoney("ten")).toBeNull());
+  it("returns null for a European decimal comma", () => expect(parseMoney("12,50")).toBeNull());
+  it("returns null for misplaced commas", () => expect(parseMoney("1,2,3")).toBeNull());
+  it("returns null for three decimal places", () => expect(parseMoney("250.000")).toBeNull());
+  it("returns null for repeated decimal points", () => expect(parseMoney("1.5.2")).toBeNull());
+  it("parses a grouped thousand", () => expect(parseMoney("1,000")).toBe(1000));
+  it("parses one decimal place", () => expect(parseMoney("1000.5")).toBe(1000.5));
+  it("parses a dollar sign with spaces", () => expect(parseMoney(" $ 250,000 ")).toBe(250000));
 });
 
 describe("parseCount", () => {

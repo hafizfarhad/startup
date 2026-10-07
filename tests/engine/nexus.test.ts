@@ -125,6 +125,7 @@ describe("evaluateState", () => {
     expect(r.measurementPeriod).toBe("Preceding twelve calendar months");
     expect(r.salesMeasure).toBe("gross");
     expect(r.verificationLevel).toBe("corroborated");
+    expect(r.verifiedOn).toBe(DATE);
   });
 });
 

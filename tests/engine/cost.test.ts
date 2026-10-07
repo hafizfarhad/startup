@@ -70,6 +70,7 @@ describe("estimateToolCost", () => {
     const e = estimateToolCost(t, { ...summary, totalTransactions: undefined });
     expect(e.annualEstimateUsd).toBe(5000);
     expect(e.notes.join(" ")).toMatch(/omitted/);
+    expect(e.notes.join(" ")).toContain("$0.50");
   });
 
   it("merchant of record still computes from sales when there are zero registrations", () => {

@@ -48,6 +48,22 @@ describe("us-economic-nexus.json invariants", () => {
   it("no row claims professional review", () => {
     for (const r of rows) expect(r.review.status, r.code).toBe("unreviewed");
   });
+  it("every corroborated row cites at least two distinct publishers", () => {
+    for (const r of rows.filter((r) => r.verification.level === "corroborated")) {
+      expect(new Set(r.sources.map((s) => s.publisher)).size, r.code).toBeGreaterThanOrEqual(2);
+    }
+  });
+  it("every official row cites at least one government or statutory-body source", () => {
+    // Hostnames of the official rows' sources were inspected when this guard was written: every
+    // official row has a .gov host or arsstc.org (the Alaska Remote Seller Sales Tax Commission), so no
+    // extra department hosts need listing.
+    const isOfficialHost = (host: string) =>
+      host.endsWith(".gov") || host === "arsstc.org" || /\.(gov|us)$/.test(host) || host.includes(".state.");
+    for (const r of rows.filter((r) => r.verification.level === "official")) {
+      const hosts = r.sources.map((s) => new URL(s.url).hostname);
+      expect(hosts.some(isOfficialHost), `${r.code}: ${hosts.join(", ")}`).toBe(true);
+    }
+  });
 });
 
 describe("tools.json invariants", () => {
