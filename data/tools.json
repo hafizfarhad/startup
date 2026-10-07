@@ -45,14 +45,14 @@
     "pricing": {
       "registration_fee_usd": null,
       "filing_fee_usd": null,
-      "per_jurisdiction_month_usd": 69,
+      "per_jurisdiction_month_usd": 79,
       "percent_fee": null,
       "fixed_fee_usd": null,
       "starting_monthly_usd": null,
       "pricing_url": "https://www.avalara.com/us/en/products/sales-and-use-tax/pricing.html"
     },
     "us_sales_tax_supported": true,
-    "notes": "Page headline is \"starting at $69/state/month\" (Core Compliance + SST Services, $699 per state per year if billed annually); Core Compliance is $79 per state per month ($799 per state per year) for annual revenue under $50M. \"Avalara Sales Tax Registration is $403 per location.\"",
+    "notes": "Core Compliance is $79 per state per month, and a $69 per state per month Core Compliance + SST Services plan exists for qualified sellers. Core Compliance is $799 per state per year for annual revenue under $50M; the SST plan is $699 per state per year if billed annually, and the page headline reads \"starting at $69/state/month\". \"Avalara Sales Tax Registration is $403 per location.\"",
     "sources": [
       {
         "url": "https://www.avalara.com/us/en/products/sales-and-use-tax/pricing.html",

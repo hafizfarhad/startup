@@ -1,5 +1,12 @@
 [
   {
+    "date": "2026-10-07",
+    "dataset": "tools",
+    "subject": "Avalara",
+    "change": "per_jurisdiction_month_usd changed from 69 (SST-qualified plan) to 79 (Core Compliance standard price); the $69 SST plan is now described in notes.",
+    "source_url": "https://www.avalara.com/us/en/products/sales-and-use-tax/pricing.html"
+  },
+  {
     "date": "2026-10-06",
     "dataset": "us-economic-nexus",
     "subject": "effective_date definition",
@@ -38,7 +45,7 @@
     "date": "2026-10-06",
     "dataset": "site",
     "subject": "v0.1",
-    "change": "Project scaffolded; datasets empty pending verification tasks.",
+    "change": "Site created.",
     "source_url": null
   }
 ]
