@@ -43,4 +43,15 @@ if (!robots.split(/\r?\n/).some((line) => line.startsWith("Sitemap: https://")))
   fail("robots.txt Sitemap line is not an absolute https URL");
 }
 
+function htmlFiles(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return htmlFiles(path);
+    return entry.name.endsWith(".html") ? [path] : [];
+  });
+}
+for (const path of htmlFiles(dist)) {
+  if (readFileSync(path, "utf8").includes("BACKLOG.md")) fail(`developer text leaked into ${path}`);
+}
+
 console.log(`postbuild-assert: OK (${statePages.length} state pages, ${REQUIRED.length} required files)`);

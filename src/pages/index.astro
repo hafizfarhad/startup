@@ -7,7 +7,8 @@ import { siteConfig } from "../lib/config";
 const rows = (await getCollection("usNexus")).map((e) => e.data);
 const tools = (await getCollection("tools")).map((e) => e.data);
 const latest = rows.map((r) => r.verification.verified_on).sort().at(-1) ?? "n/a";
-const withFigures = rows.filter((r) => r.verification.level !== "pending").length;
+const thresholdCount = rows.filter((r) => r.sales_threshold_usd !== null).length;
+const noTaxCount = rows.filter((r) => !r.has_state_sales_tax && r.threshold_rule === "none").length;
 const officialCount = rows.filter((r) => r.verification.level === "official").length;
 ---
 
@@ -19,16 +20,16 @@ const officialCount = rows.filter((r) => r.verification.level === "official").le
   </p>
   <ul>
     <li>
-      <a href="/us/economic-nexus/">Economic-nexus thresholds</a> for {rows.length} US jurisdictions: {withFigures} with
-      published figures, {officialCount} checked against an official state page, every one with sources. Most recent
-      check {latest}.
+      <a href="/us/economic-nexus/">Economic-nexus thresholds</a> for {rows.length} US jurisdictions: {thresholdCount} with
+      threshold figures, {noTaxCount} with no statewide sales tax, {officialCount} checked against an official state page,
+      every one with sources. Most recent check {latest}.
     </li>
     <li><a href="/tools/">Pricing</a> for {tools.length} compliance tools and merchants of record.</li>
     <li><a href="/wizard/">The wizard</a>: enter sales by state, get a registration list and a cost estimate per tool.</li>
   </ul>
   <NewsletterForm />
   <p class="muted">
-    Data changes are logged on the <a href="/changelog/">changelog</a>. How verification works:
+    Data changes are logged on the <a href="/changelog/">changelog</a>. How verification works:{" "}
     <a href="/methodology/">methodology</a>.
   </p>
 </Base>

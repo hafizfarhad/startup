@@ -39,7 +39,7 @@ const yesNo = (v: boolean | null) => (v === null ? "Not recorded" : v ? "Yes" : 
     {
       pending ? (
         <p class="notice">
-          Threshold figures for {row.name} are pending verification and are not shown. See the
+          Threshold figures for {row.name} are pending verification and are not shown. See the{" "}
           <a href="/methodology/">methodology</a> for what that means.
         </p>
       ) : (
@@ -56,7 +56,7 @@ const yesNo = (v: boolean | null) => (v === null ? "Not recorded" : v ? "Yes" : 
           <dd>{row.measurement_period ?? "Not recorded"}</dd>
           <dt>Marketplace sales included</dt>
           <dd>{yesNo(row.includes_marketplace_sales)}</dd>
-          <dt>Current rule in effect since</dt>
+          <dt>Current rule since</dt>
           <dd>{row.effective_date ?? "Not recorded"}</dd>
           <dt>Register</dt>
           <dd>
@@ -76,7 +76,7 @@ const yesNo = (v: boolean | null) => (v === null ? "Not recorded" : v ? "Yes" : 
     <SourceList sources={row.sources} />
     <ReportError subject={`Correction: ${row.name} economic nexus`} />
     <p class="muted">
-      <a href="/us/economic-nexus/">All US jurisdictions</a> · <a href="/wizard/">Registration wizard</a> ·
+      <a href="/us/economic-nexus/">All US jurisdictions</a> · <a href="/wizard/">Registration wizard</a> ·{" "}
       <a href="/data/us-economic-nexus.json">Download JSON</a>
     </p>
   </article>

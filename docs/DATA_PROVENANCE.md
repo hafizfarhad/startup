@@ -30,7 +30,8 @@ state-by-state economic-nexus guide. Others may be added if they are independent
 - `effective_date` is the date the CURRENTLY STATED threshold and rule took effect. When a cited source states a later
   change (for example a transaction threshold removed on a date), that later date is used and the original law date is
   kept in `notes`. When sources conflict on that date, the field is null and a backlog bullet records both values. The
-  site labels this column "Current rule since".
+  site labels this column "Current rule since" and defines it publicly: "Current rule since" is the date the currently
+  stated threshold and rule took effect; earlier law dates are kept in each state's notes.
 - `comparator` is set only from explicit wording in a source's threshold text ("more than" or "exceeds" ⇒ `exceeds`;
   "or more" or "at least" ⇒ `meets_or_exceeds`). One explicit source suffices; conflicting explicit wording between
   sources ⇒ null plus a backlog bullet; mixed wording inside one source ⇒ null plus a note.

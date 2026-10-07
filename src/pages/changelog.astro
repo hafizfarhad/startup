@@ -7,9 +7,9 @@ const entries = (await getCollection("changelog"))
   .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 ---
 
-<Base title="Changelog" description="Every change to a published threshold or price, with its date and source.">
+<Base title="Changelog" description="Every change to a published threshold or price, with its date and, where one exists, its source.">
   <h1>Changelog</h1>
-  <p>Every change to a rendered figure is recorded here with its source.</p>
+  <p>Every change to a rendered figure is recorded here, with its source where one exists.</p>
   <div class="table-wrap">
     <table class="data-table">
       <thead>

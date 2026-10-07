@@ -2,7 +2,7 @@ import { estimateToolCosts } from "../../lib/engine/cost";
 import { evaluateAll } from "../../lib/engine/nexus";
 import { parseCount, parseMoney } from "../../lib/engine/parse";
 import type { StateResult, WizardLine } from "../../lib/engine/types";
-import { fmtUsd } from "../../lib/format";
+import { fmtUsd, levelLabel } from "../../lib/format";
 import type { NexusRow, ToolRow } from "../../lib/schemas";
 import { toSlug } from "../../lib/slug";
 
@@ -25,6 +25,7 @@ function escapeHtml(s: string): string {
 const rows = readJson<NexusRow[]>("wizard-nexus-data");
 const tools = readJson<ToolRow[]>("wizard-tools-data");
 const byCode = new Map(rows.map((r) => [r.code, r] as const));
+const toolBySlug = new Map(tools.map((t) => [t.slug, t] as const));
 
 const form = byId<HTMLFormElement>("wizard-form");
 const homeSelect = byId<HTMLSelectElement>("home-state");
@@ -60,7 +61,7 @@ function addLine(): void {
   div.className = "line";
   div.innerHTML = `
     <select class="line-state" aria-label="State">${stateOptions()}</select>
-    <input class="line-sales" inputmode="decimal" placeholder="Gross sales, USD" aria-label="Gross sales in USD" />
+    <input class="line-sales" inputmode="decimal" placeholder="Gross sales, USD (e.g. 250000)" aria-label="Gross sales in USD" />
     <input class="line-tx" inputmode="numeric" placeholder="Transactions (optional)" aria-label="Transactions, optional" />
     <button type="button" class="remove-line">Remove</button>`;
   div.querySelector(".remove-line")?.addEventListener("click", () => {
@@ -76,8 +77,12 @@ function readLines(): { lines: WizardLine[]; errors: string[] } {
   const lines: WizardLine[] = [];
   linesEl.querySelectorAll<HTMLDivElement>(".line").forEach((div, i) => {
     const code = (div.querySelector(".line-state") as HTMLSelectElement).value;
-    const sales = parseMoney((div.querySelector(".line-sales") as HTMLInputElement).value);
-    const tx = parseCount((div.querySelector(".line-tx") as HTMLInputElement).value);
+    const salesText = (div.querySelector(".line-sales") as HTMLInputElement).value;
+    const txText = (div.querySelector(".line-tx") as HTMLInputElement).value;
+    // A completely blank line is ignored so a home-state-only submission works without clicking Remove.
+    if (salesText.trim() === "" && txText.trim() === "") return;
+    const sales = parseMoney(salesText);
+    const tx = parseCount(txText);
     const name = byCode.get(code)?.name ?? code;
     if (sales === null) errors.push(`Line ${i + 1} (${name}): enter gross sales as a number, for example 250000.`);
     if (tx === null) errors.push(`Line ${i + 1} (${name}): transactions must be a whole number.`);
@@ -108,16 +113,25 @@ function render(): void {
   errorsEl.textContent = "";
   summaryEl.textContent = `${out.registrationCount} of ${out.results.length} states indicate a registration obligation. Total sales entered: ${fmtUsd(out.totalSalesUsd)}.`;
 
+  const lineByCode = new Map(lines.map((l) => [l.code, l] as const));
   resultsBody.innerHTML = out.results
-    .map(
-      (r) => `
+    .map((r) => {
+      const slug = toSlug(r.name);
+      const line = lineByCode.get(r.code);
+      const entered = line
+        ? `<span class="muted">Entered ${fmtUsd(line.grossSalesUsd)}${
+            line.transactions !== undefined ? ` and ${line.transactions.toLocaleString("en-US")} transactions` : ""
+          }.</span> `
+        : "";
+      const sourceLink = ` <a href="/us/economic-nexus/${slug}/">${r.sources.length} source${r.sources.length === 1 ? "" : "s"}</a>`;
+      return `
       <tr>
-        <td><a href="/us/economic-nexus/${toSlug(r.name)}/">${escapeHtml(r.name)}</a></td>
+        <td><a href="/us/economic-nexus/${slug}/">${escapeHtml(r.name)}</a></td>
         <td><span class="status status-${r.status}">${STATUS_LABEL[r.status]}</span></td>
-        <td>${escapeHtml(r.message)}${r.notes ? ` <span class="muted">${escapeHtml(r.notes)}</span>` : ""}</td>
-        <td><span class="badge badge-${r.verificationLevel}">${r.verificationLevel.replace("_", " ")}</span></td>
-      </tr>`,
-    )
+        <td>${entered}${escapeHtml(r.message)}${r.notes ? ` <span class="muted">${escapeHtml(r.notes)}</span>` : ""}${sourceLink}</td>
+        <td><span class="badge badge-${r.verificationLevel}">${levelLabel(r.verificationLevel)}</span> <span class="muted">Verified ${r.verifiedOn}</span></td>
+      </tr>`;
+    })
     .join("");
 
   const costs = estimateToolCosts(tools, {
@@ -127,19 +141,25 @@ function render(): void {
   }).sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name));
 
   costsBody.innerHTML = costs
-    .map(
-      (c) => `
+    .map((c) => {
+      // Vendors whose pages do not state US sales-tax support get no estimate.
+      const unsupported = toolBySlug.get(c.slug)?.us_sales_tax_supported === false;
+      const estimate = unsupported
+        ? "Not confirmed for US sales tax"
+        : c.annualEstimateUsd === null
+          ? "Custom quote"
+          : `${c.label === "from" ? "From " : ""}${fmtUsd(c.annualEstimateUsd)} per year`;
+      const notes = unsupported
+        ? "This vendor's pages do not state US sales-tax support."
+        : c.notes.map(escapeHtml).join(" ");
+      return `
       <tr>
         <td>${escapeHtml(c.name)}</td>
         <td>${c.category === "merchant_of_record" ? "Merchant of record" : "Compliance software"}</td>
-        <td>${
-          c.annualEstimateUsd === null
-            ? "Custom quote"
-            : `${c.label === "from" ? "From " : ""}${fmtUsd(c.annualEstimateUsd)} per year`
-        }</td>
-        <td>${c.notes.map(escapeHtml).join(" ")}</td>
-      </tr>`,
-    )
+        <td>${estimate}</td>
+        <td>${notes}</td>
+      </tr>`;
+    })
     .join("");
 
   caveatsEl.innerHTML = (out.results[0]?.caveats ?? []).map((c) => `<li>${escapeHtml(c)}</li>`).join("");

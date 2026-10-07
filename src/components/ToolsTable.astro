@@ -21,6 +21,7 @@ const sorted = [...tools].sort((a, b) => a.name.localeCompare(b.name));
           <tr>
             <th>Tool</th>
             <th>Pricing model</th>
+            <th>US sales tax</th>
             <th>Public pricing</th>
             <th>Verified</th>
             <th>Notes</th>
@@ -35,6 +36,7 @@ const sorted = [...tools].sort((a, b) => a.name.localeCompare(b.name));
                 </a>
               </td>
               <td>{modelLabel(t.pricing_model)}</td>
+              <td>{t.us_sales_tax_supported ? "Yes" : "Not confirmed"}</td>
               <td>
                 {formatPricing(t)}
                 {t.pricing.pricing_url && (
